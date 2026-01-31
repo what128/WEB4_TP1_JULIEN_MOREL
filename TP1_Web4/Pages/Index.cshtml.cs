@@ -1,20 +1,26 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using TP1_Web4.Data;
+using TP1_Web4.Models;
+using TP1_Web4.Data.Migrations;
+using Microsoft.EntityFrameworkCore;
 
 namespace TP1_Web4.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        public List<Evenement> Evenements { get; set; }
 
-        public IndexModel(ILogger<IndexModel> logger)
+        private readonly ApplicationDbContext _context;
+        public IndexModel(ApplicationDbContext context)
         {
-            _logger = logger;
+            _context = context;
         }
 
-        public void OnGet()
-        {
 
+        public async Task OnGet()
+        {
+            Evenements = await _context.Evenements.Include(a => a.Categorie).ToListAsync();
         }
     }
 }

@@ -4,7 +4,43 @@
     ViewData["Title"] = "Home page";
 }
 
+<h1 class="text-center my-4">Liste des articles</h1>
+@if (TempData["Message"] != null)
+{
+	<div>
+		<p>@TempData["Message"]</p>
+	</div>
+}
+
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+	<a asp-page="/Evenements/Create" class="btn btn-primary mb-3">Créer un évènement</a>
 </div>
+
+@if(Model.Evenements.Count == 0)
+{
+	<div>
+		<p class="text-center text-muted">Aucun évènement disponible en ce moment.</p>
+	</div>
+}
+else
+{
+	<div class="container">
+		<div class="row">
+			@foreach(Evenement unEvenement in Model.Evenements)
+			{
+				<div class="col-md-6">
+					<div class="card m-4 shadow-sm">
+						<div class="card-body">
+							<h2>@unEvenement.Titre</h2>
+							<p class="text-muted">@unEvenement.Image</p>
+							<p class="card-text">@unEvenement.DateDebut</p>
+							<p class="card-text">@unEvenement.DateFin</p>
+							<a asp-page="/Evenements/Details" asp-route-id="@unEvenement.Id" class="btn btn-info mt-2">Voir les détails</a>
+						</div>
+					</div>
+				</div>
+			}
+		</div>
+	</div>
+}
+

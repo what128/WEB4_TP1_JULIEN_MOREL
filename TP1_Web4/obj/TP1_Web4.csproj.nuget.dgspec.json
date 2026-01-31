@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Web4\\TP1\\TP1_Web4\\TP1_Web4\\TP1_Web4.csproj": {}
+    "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\TP1_Web4.csproj": {}
   },
   "projects": {
-    "E:\\Web4\\TP1\\TP1_Web4\\TP1_Web4\\TP1_Web4.csproj": {
+    "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\TP1_Web4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Web4\\TP1\\TP1_Web4\\TP1_Web4\\TP1_Web4.csproj",
+        "projectUniqueName": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\TP1_Web4.csproj",
         "projectName": "TP1_Web4",
-        "projectPath": "E:\\Web4\\TP1\\TP1_Web4\\TP1_Web4\\TP1_Web4.csproj",
+        "projectPath": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\TP1_Web4.csproj",
         "packagesPath": "C:\\Users\\p2c\\.nuget\\packages\\",
-        "outputPath": "E:\\Web4\\TP1\\TP1_Web4\\TP1_Web4\\obj\\",
+        "outputPath": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -64,11 +64,17 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[9.0.8, )"
+              "version": "[9.0.12, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.8, )"
+              "version": "[9.0.12, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[9.0.12, )"
             }
           },
           "imports": [
