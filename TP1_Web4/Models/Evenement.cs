@@ -8,7 +8,11 @@
 
         public string Description { get; set; }
 
-        public string Image { get; set; }
+        public string? Image { get; set; }
+
+        public string? Auteur { get; set; }
+
+        public List<string>? Participants { get; set; }
 
         public int CategorieId { get; set; }
 

@@ -1,11 +1,11 @@
-﻿@page "{id:guid}"
+﻿@page
 @model TP1_Web4.Pages.Evenements.DetailsModel
 
 @{
     ViewData["Title"] = "Details";
 }
 
-<h1>Détails de l'évènement</h1>
+<h1>Details</h1>
 
 <div>
     <h4>Evenement</h4>
@@ -30,6 +30,18 @@
             @Html.DisplayFor(model => model.Evenement.Image)
         </dd>
         <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Evenement.Auteur)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Evenement.Auteur)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Evenement.Participants)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Evenement.Participants)
+        </dd>
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Evenement.Categorie)
         </dt>
         <dd class="col-sm-10">
@@ -47,27 +59,31 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Evenement.DateFin)
         </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Evenement.Addresse)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Evenement.Addresse)
-        </dd>
+        @if (User.Identity.IsAuthenticated)
+        {   
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Evenement.Addresse)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Evenement.Addresse)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Evenement.CodePostal)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Evenement.CodePostal)
+            </dd>
+        }
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Evenement.Ville)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Evenement.Ville)
         </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Evenement.CodePostal)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Evenement.CodePostal)
-        </dd>
+        
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Evenement.Id">Modifier</a> |
-    <a asp-page="./Index">Retour à la liste</a>
+    <a asp-page="./Edit" asp-route-id="@Model.Evenement.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
 </div>

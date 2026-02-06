@@ -35,6 +35,7 @@ namespace TP1_Web4.Areas.Admin.Pages.Shared.Categories
                 return Page();
             }
 
+            Categorie.Archive = false;
             _context.Categories.Add(Categorie);
             await _context.SaveChangesAsync();
 

@@ -6,5 +6,7 @@
 
         public string Nom { get; set; }
 
+        public bool Archive { get; set; }
+
     }
 }

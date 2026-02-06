@@ -5,7 +5,7 @@ using TP1_Web4.Models;
 
 namespace TP1_Web4.Data
 {
-    public class ApplicationDbContext : IdentityDbContext<IdentityUser>
+    public class ApplicationDbContext : IdentityDbContext<Utilisateur>
     {
 
         public DbSet<Evenement> Evenements { get; set; }
