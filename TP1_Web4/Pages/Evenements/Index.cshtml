@@ -82,11 +82,11 @@
             <td>
                 @if(User.Identity?.Name == item.Auteur)
                 {
-                        <a asp-page="./Edit" asp-route-id="@item.Id">Edit |</a>
-                        <a asp-page="./Delete" asp-route-id="@item.Id">Delete |</a>
+                        <a asp-page="./Edit" asp-route-id="@item.Id">Modifier |</a>
+                        <a asp-page="./Delete" asp-route-id="@item.Id">Annuler |</a>
                 }
                 
-                <a asp-page="./Details" asp-route-id="@item.Id">Details</a>
+                <a asp-page="./Details" asp-route-id="@item.Id">Détails</a>
                 
             </td>
         </tr>

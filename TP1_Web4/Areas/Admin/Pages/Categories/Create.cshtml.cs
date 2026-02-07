@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using TP1_Web4.Data;
 using TP1_Web4.Models;
 
@@ -35,8 +36,18 @@ namespace TP1_Web4.Areas.Admin.Pages.Shared.Categories
                 return Page();
             }
 
-            Categorie.Archive = false;
-            _context.Categories.Add(Categorie);
+            Categorie? uneCategorie = _context.Categories.Where(c => c.Nom == Categorie.Nom).FirstOrDefault();
+
+            if (uneCategorie is not null)
+            {
+                uneCategorie.Archive = false;
+                _context.Attach(uneCategorie).State = EntityState.Modified;
+            }
+            else
+            {
+                Categorie.Archive = false;
+                _context.Categories.Add(Categorie);
+            }
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

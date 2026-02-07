@@ -189,6 +189,9 @@ namespace TP1_Web4.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool?>("Annule")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Auteur")
                         .HasColumnType("nvarchar(max)");
 

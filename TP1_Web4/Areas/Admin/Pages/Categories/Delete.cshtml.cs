@@ -52,7 +52,16 @@ namespace TP1_Web4.Areas.Admin.Pages.Shared.Categories
             if (categorie != null)
             {
                 Categorie = categorie;
-                _context.Categories.Remove(Categorie);
+                List<Evenement> evenements = await _context.Evenements.Where(e =>e.DateDebut > DateTime.Now
+                && e.Categorie.Nom == Categorie.Nom).ToListAsync();
+                if (evenements.Count > 0)
+                {
+                    ModelState.AddModelError("", "Un évènement futur utilise cette catégorie. Impossible de l'archiver.");
+                    return Page();
+                }
+
+                Categorie.Archive = true;
+                _context.Attach(Categorie).State = EntityState.Modified;
                 await _context.SaveChangesAsync();
             }
 

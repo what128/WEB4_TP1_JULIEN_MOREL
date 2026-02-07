@@ -61,6 +61,8 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\uploads\articles\a4760138-784c-466f-a1b2-2624f319d849.png
+wwwroot\uploads\articles\fecbacf1-6ef3-4314-92c9-4e6cb4c2c963.jpg
 E:\Web4\TP1_JULIEN_MOREL\WEB4_TP1_JULIEN_MOREL\TP1_Web4\wwwroot\css\site.css
 E:\Web4\TP1_JULIEN_MOREL\WEB4_TP1_JULIEN_MOREL\TP1_Web4\wwwroot\favicon.ico
 E:\Web4\TP1_JULIEN_MOREL\WEB4_TP1_JULIEN_MOREL\TP1_Web4\wwwroot\js\site.js

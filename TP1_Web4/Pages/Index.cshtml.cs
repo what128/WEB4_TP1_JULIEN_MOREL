@@ -27,7 +27,8 @@ namespace TP1_Web4.Pages
         public async Task OnGet()
         {
             ImageFolder = _configuration["Images:PublicUrl"];
-            Evenements = await _context.Evenements.Include(a => a.Categorie).ToListAsync();
+            Evenements = await _context.Evenements.Include(e => e.Categorie).Where(e => e.DateDebut > DateTime.Now && e.Annule == false)
+                .OrderBy(e => e.DateDebut).ThenBy(e => e.Titre).ToListAsync();
             //var result = await _roleManager.CreateAsync(new IdentityRole("Utilisateur"));
             //var result2 = await _roleManager.CreateAsync(new IdentityRole("Admin"));
         }

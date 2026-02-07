@@ -54,7 +54,8 @@ namespace TP1_Web4.Pages.Evenements
             if (evenement != null)
             {
                 Evenement = evenement;
-                _context.Evenements.Remove(Evenement);
+                Evenement.Annule = true;
+                _context.Attach(Evenement).State = EntityState.Modified;
                 await _context.SaveChangesAsync();
             }
 

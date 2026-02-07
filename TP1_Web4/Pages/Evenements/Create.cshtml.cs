@@ -48,6 +48,7 @@ namespace TP1_Web4.Pages.Evenements
             Evenement.Auteur = User.Identity.Name;
             Evenement.Participants = new List<string>();
             Evenement.Participants.Add(User.Identity.Name);
+            Evenement.Annule = false;
             if (!ModelState.IsValid)
             {
                 ViewData["CategorieId"] = new SelectList(_context.Categories.Where(c => c.Archive == false), "Id", "Nom");

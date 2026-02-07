@@ -23,7 +23,7 @@ namespace TP1_Web4.Areas.Admin.Pages.Shared.Categories
 
         public async Task OnGetAsync()
         {
-            Categorie = await _context.Categories.ToListAsync();
+            Categorie = await _context.Categories.Where(c => c.Archive == false).ToListAsync();
         }
     }
 }

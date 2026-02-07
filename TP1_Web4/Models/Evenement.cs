@@ -8,6 +8,8 @@
 
         public string Description { get; set; }
 
+        public bool? Annule { get; set; }
+
         public string? Image { get; set; }
 
         public string? Auteur { get; set; }

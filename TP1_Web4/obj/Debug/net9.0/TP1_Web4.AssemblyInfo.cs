@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TP1_Web4")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4c73a6cb4447da8a180479662e938509eeb4a83b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d3be2dc3504bfcc75410218156210a94178ad76c")]
 [assembly: System.Reflection.AssemblyProductAttribute("TP1_Web4")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TP1_Web4")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
