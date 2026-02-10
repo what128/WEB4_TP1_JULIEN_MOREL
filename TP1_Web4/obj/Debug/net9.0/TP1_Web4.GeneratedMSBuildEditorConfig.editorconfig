@@ -132,6 +132,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXZlbmVtZW50c1xBbm51bGVyUGFydGljaXBhdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Web4/TP1_JULIEN_MOREL/WEB4_TP1_JULIEN_MOREL/TP1_Web4/Pages/Evenements/ApiDistance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXZlbmVtZW50c1xBcGlEaXN0YW5jZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Web4/TP1_JULIEN_MOREL/WEB4_TP1_JULIEN_MOREL/TP1_Web4/Pages/Evenements/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXZlbmVtZW50c1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

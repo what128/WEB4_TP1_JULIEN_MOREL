@@ -36,14 +36,13 @@ else
 						<div class="card-body">
 							<img src="@Model.ImageFolder@unEvenement.Image" alt="Image de - @unEvenement.Titre" class="event-img"/>
 							<h2>@unEvenement.Titre</h2>
-							<p class="text-muted">Titre: @unEvenement.Image</p>
 							<p class="card-text">Date de début: @unEvenement.DateDebut</p>
 							<p class="card-text">Date de fin: @unEvenement.DateFin</p>
 							<p class="card-text">Ville: @unEvenement.Ville</p>
 							@if (User.Identity.IsAuthenticated)
 							{
 								<p class="card-text">Addresse: @unEvenement.Addresse</p>
-								<p class="card-text">Distance: na km</p>
+								<p class="card-text">Distance: @Model.Distances[unEvenement.Id].ToString() km</p>
 								@if (unEvenement.Participants?.Contains(User.Identity.Name) == true)
 								{
 									<a asp-page="/Evenements/AnnulerParticipation" asp-route-id="@unEvenement.Id" class="btn btn-info mt-2">Annuler ma participation</a>

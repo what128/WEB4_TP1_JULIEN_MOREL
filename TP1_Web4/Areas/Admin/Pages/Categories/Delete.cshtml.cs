@@ -56,8 +56,7 @@ namespace TP1_Web4.Areas.Admin.Pages.Shared.Categories
                 && e.Categorie.Nom == Categorie.Nom).ToListAsync();
                 if (evenements.Count > 0)
                 {
-                    ModelState.AddModelError("", "Un évènement futur utilise cette catégorie. Impossible de l'archiver.");
-                    return Page();
+                    return BadRequest("Impossible d'archiver la catégorie, car elle est utilisée par un évènement futur.");
                 }
 
                 Categorie.Archive = true;

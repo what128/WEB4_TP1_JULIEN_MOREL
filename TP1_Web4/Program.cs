@@ -5,6 +5,8 @@ using TP1_Web4.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddHttpClient();
+
 builder.Services.AddDefaultIdentity<Utilisateur>(options =>
 {
     options.Password.RequireDigit = true;

@@ -28,7 +28,7 @@ namespace TP1_Web4.Pages.Evenements
                 return NotFound();
             }
 
-            var evenement = await _context.Evenements.FirstOrDefaultAsync(m => m.Id == id);
+            var evenement = await _context.Evenements.Include(e => e.Categorie).FirstOrDefaultAsync(m => m.Id == id);
 
             if (evenement is not null)
             {

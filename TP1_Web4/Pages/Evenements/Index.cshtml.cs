@@ -16,6 +16,8 @@ namespace TP1_Web4.Pages.Evenements
     {
         private readonly TP1_Web4.Data.ApplicationDbContext _context;
 
+        public List<double> Distances { get; set; }
+
         public IndexModel(TP1_Web4.Data.ApplicationDbContext context)
         {
             _context = context;
@@ -23,10 +25,15 @@ namespace TP1_Web4.Pages.Evenements
 
         public IList<Evenement> Evenement { get;set; } = default!;
 
+        public Utilisateur Utilisateur { get; set; }
+
         public async Task OnGetAsync()
         {
             Evenement = await _context.Evenements
                 .Include(e => e.Categorie).Where(e => e.Auteur == User.Identity.Name).ToListAsync();
+
+          
+           
         }
     }
 }

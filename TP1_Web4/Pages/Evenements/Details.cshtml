@@ -39,7 +39,21 @@
             @Html.DisplayNameFor(model => model.Evenement.Participants)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Evenement.Participants)
+                @if (Model.Evenement.Participants?.Count > 0)
+                {
+                    @for (int i = 0; i < Model.Evenement.Participants.Count; i++)
+                    {
+                        @Model.Evenement.Participants[i]
+                        @if (i < Model.Evenement.Participants.Count - 1)
+                        {
+                            <text>, </text>
+                        }
+                    }
+                }
+                else
+                {
+                    <text>Aucun participant</text>
+                }
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Evenement.Categorie)
@@ -59,6 +73,12 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Evenement.DateFin)
         </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Evenement.Annule)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Evenement.Annule)
+        </dd> 
         @if (User.Identity.IsAuthenticated)
         {   
             <dt class="col-sm-2">
