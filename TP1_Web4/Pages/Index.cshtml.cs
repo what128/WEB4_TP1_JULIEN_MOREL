@@ -39,23 +39,19 @@ namespace TP1_Web4.Pages
             Utilisateur = await _context.Users.FirstOrDefaultAsync(u => u.UserName == User.Identity.Name);
             if (Utilisateur is not null)
             {
-                string codePostalUtilisateur = Utilisateur.CodePostal;
-                if (Evenements.Count > 0)
+                Distances = new Dictionary<Guid, double>();
+                foreach (Evenement e in Evenements)
                 {
-                    Distances = new Dictionary<Guid, double>();
-                    foreach (Evenement e in Evenements)
-                    {
-                        string codePostalEvenement = e.CodePostal;
-                        string apiUrl = $"https://api.zip-codes.com/ZipCodesAPI.svc/1.0/CalculateDistance/ByZip?fromzipcode" +
-                            $"={codePostalUtilisateur}&tozipcode={codePostalEvenement}&key=UQWFBF1XPN4DGNP6P7G2";
+                    string codePostalUtilisateur = Utilisateur.CodePostal;
+                    string codePostalEvenement = e.CodePostal;
+                    string apiUrl = $"https://api.zip-codes.com/ZipCodesAPI.svc/1.0/CalculateDistance/ByZip?fromzipcode" +
+                        $"={codePostalUtilisateur}&tozipcode={codePostalEvenement}&key=UQWFBF1XPN4DGNP6P7G2";
 
-                        Distance = await _httpClient.GetFromJsonAsync<ApiEvenement>(apiUrl);
-
-                        double distance = Distance.DistanceInKm;
-                        Distances.Add(e.Id, distance);
-                    }
+                    Distance = await _httpClient.GetFromJsonAsync<ApiEvenement>(apiUrl);
+                    Distances.Add(e.Id, Distance.DistanceInKm);
                 }
             }
+
             //var result = await _roleManager.CreateAsync(new IdentityRole("Utilisateur"));
             //var result2 = await _roleManager.CreateAsync(new IdentityRole("Admin"));
         }

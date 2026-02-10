@@ -36,18 +36,8 @@ namespace TP1_Web4.Areas.Admin.Pages.Shared.Categories
                 return Page();
             }
 
-            Categorie? uneCategorie = _context.Categories.Where(c => c.Nom == Categorie.Nom).FirstOrDefault();
-
-            if (uneCategorie is not null)
-            {
-                uneCategorie.Archive = false;
-                _context.Attach(uneCategorie).State = EntityState.Modified;
-            }
-            else
-            {
-                Categorie.Archive = false;
-                _context.Categories.Add(Categorie);
-            }
+            Categorie.Archive = false;
+            _context.Categories.Add(Categorie);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

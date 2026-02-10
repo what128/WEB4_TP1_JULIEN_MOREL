@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
@@ -37,6 +38,8 @@ namespace TP1_Web4.Pages.Evenements
         [BindProperty]
         public Evenement Evenement { get; set; } = default!;
 
+        public List<Evenement> Evenements { get; set; }
+
         [BindProperty]
         [DisplayName("Image")]
         [Required(ErrorMessage = "Vous devez prendre une image")]
@@ -45,6 +48,18 @@ namespace TP1_Web4.Pages.Evenements
         // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
+            Evenements = await _context.Evenements.Where(
+                e => e.Titre == Evenement.Titre
+                && e.DateDebut.Date == Evenement.DateDebut.Date
+                && e.Ville == Evenement.Ville
+                && e.DateFin < DateTime.Now
+                && e.Annule == false).ToListAsync();
+            if (Evenements.Count > 0)
+            {
+                ModelState.AddModelError("", "Une évènement ayant des caractéristiques similaires existe déjà.");
+                return Page();
+            }
+
             Evenement.Auteur = User.Identity.Name;
             Evenement.Participants = new List<string>();
             Evenement.Participants.Add(User.Identity.Name);

@@ -15,6 +15,7 @@ namespace TP1_Web4.Models
 
         public string? Image { get; set; }
 
+        [DisplayName("Organisateur")]
         public string? Auteur { get; set; }
 
         public List<string>? Participants { get; set; }

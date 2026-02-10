@@ -124,7 +124,7 @@ namespace TP1_Web4.Areas.Identity.Pages.Account
             //ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                Utilisateurs  = _context.Users.Where(u => u.UserName == Input.UserName).ToList();
+                Utilisateurs  = _context.Users.Where(u => u.Email == Input.Email).ToList();
                 if (Utilisateurs.Count != 0)
                 {
                     ModelState.AddModelError("UserName", "Ce nom d'utilisateur existe déjà.");

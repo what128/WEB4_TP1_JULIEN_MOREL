@@ -19,9 +19,11 @@ namespace TP1_Web4.Pages
             _logger = logger;
         }
 
-        public void OnGet()
+        public int StatusCode { get; set; }
+        public void OnGet(int? code)
         {
-            RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
+            StatusCode = code ?? 500;
+            //RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
         }
     }
 

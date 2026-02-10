@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{id:guid}"
 @model TP1_Web4.Pages.Evenements.DetailsModel
 
 @{
@@ -10,6 +10,7 @@
 <div>
     <h4>Evenement</h4>
     <hr />
+    <img  src="@Model.ImageFolder@Model.Evenement.Image" alt="Image de l'évènement"/>
     <dl class="row">
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Evenement.Titre)
@@ -22,12 +23,6 @@
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Evenement.Description)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Evenement.Image)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Evenement.Image)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Evenement.Auteur)
@@ -100,7 +95,23 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Evenement.Ville)
         </dd>
-        
+         @if (User.Identity.IsAuthenticated)
+	     {
+             <dt class="col-sm-2">
+                Distance
+            </dt>
+             <dd class="col-sm-10">
+                @Model.Distance.DistanceInKm km
+            </dd>
+			@if (Model.Evenement.Participants?.Contains(User.Identity.Name) == true)
+			{
+				<a class="btn btn-primary" asp-page="/Evenements/AnnulerParticipation" asp-route-id="@Model.Evenement.Id" class="btn btn-info mt-2">Annuler ma participation</a>
+			}
+			else if (Model.Evenement.Auteur != User.Identity.Name)
+			{
+				<a class="btn btn-primary" asp-page="/Evenements/Participer" asp-route-id="@Model.Evenement.Id" class="btn btn-info mt-2">Participer</a>	
+			}	
+        }
     </dl>
 </div>
 <div>

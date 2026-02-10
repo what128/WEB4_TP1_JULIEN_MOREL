@@ -43,15 +43,6 @@ else
 							{
 								<p class="card-text">Addresse: @unEvenement.Addresse</p>
 								<p class="card-text">Distance: @Model.Distances[unEvenement.Id].ToString() km</p>
-								@if (unEvenement.Participants?.Contains(User.Identity.Name) == true)
-								{
-									<a asp-page="/Evenements/AnnulerParticipation" asp-route-id="@unEvenement.Id" class="btn btn-info mt-2">Annuler ma participation</a>
-								}
-								else
-								{
-									<a asp-page="/Evenements/Participer" asp-route-id="@unEvenement.Id" class="btn btn-info mt-2">Participer</a>	
-								}
-								
 							}
 							<a asp-page="/Evenements/Details" asp-route-id="@unEvenement.Id" class="btn btn-info mt-2">Voir les détails</a>
 						</div>
