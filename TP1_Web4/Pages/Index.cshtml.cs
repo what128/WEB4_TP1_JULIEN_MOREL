@@ -47,7 +47,15 @@ namespace TP1_Web4.Pages
                     string apiUrl = $"https://api.zip-codes.com/ZipCodesAPI.svc/1.0/CalculateDistance/ByZip?fromzipcode" +
                         $"={codePostalUtilisateur}&tozipcode={codePostalEvenement}&key=UQWFBF1XPN4DGNP6P7G2";
 
-                    Distance = await _httpClient.GetFromJsonAsync<ApiEvenement>(apiUrl);
+                    try
+                    {
+                        Distance = await _httpClient.GetFromJsonAsync<ApiEvenement>(apiUrl);
+                    }
+                    catch (Exception)
+                    {
+                        Distance = new ApiEvenement();
+                        Distance.DistanceInKm = -1;
+                    }
                     Distances.Add(e.Id, Distance.DistanceInKm);
                 }
             }

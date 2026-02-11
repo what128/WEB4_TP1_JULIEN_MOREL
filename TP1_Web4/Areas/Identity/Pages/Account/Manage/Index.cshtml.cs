@@ -3,6 +3,7 @@
 #nullable disable
 
 using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
@@ -30,6 +31,9 @@ namespace TP1_Web4.Areas.Identity.Pages.Account.Manage
         ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
         ///     directly from your code. This API may change or be removed in future releases.
         /// </summary>
+        /// 
+        [BindProperty]
+        [DisplayName("Nom d'utilisateur")]
         public string Username { get; set; }
 
         public string Nom { get; set; }
@@ -112,7 +116,17 @@ namespace TP1_Web4.Areas.Identity.Pages.Account.Manage
                 var setPhoneResult = await _userManager.SetPhoneNumberAsync(user, Input.PhoneNumber);
                 if (!setPhoneResult.Succeeded)
                 {
-                    StatusMessage = "Unexpected error when trying to set phone number.";
+                    StatusMessage = "Une erreur inconnue est survenue lors du changement du numéro de téléphone.";
+                    return RedirectToPage();
+                }
+            }
+            var userName = await _userManager.GetUserNameAsync(user);
+            if (Username != userName)
+            {
+                var setResult = await _userManager.SetUserNameAsync(user, Username);
+                if (!setResult.Succeeded)
+                {
+                    StatusMessage = "Une erreur inconnue est survenue lors du changement du nom d'utilisateur.";
                     return RedirectToPage();
                 }
             }

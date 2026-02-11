@@ -10,88 +10,95 @@
 <p>
     <a class="btn btn-primary" asp-page="Create">Créer un nouvel évènement</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Evenement[0].Titre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Evenement[0].Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Evenement[0].Auteur)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Evenement[0].Categorie)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Evenement[0].DateDebut)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Evenement[0].DateFin)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Evenement[0].Annule)
-            </th> 
-            <th>
-                 @Html.DisplayNameFor(model => model.Evenement[0].Addresse)
-            </th>
-            <th>
-                 @Html.DisplayNameFor(model => model.Evenement[0].Ville)
-            </th>
-            <th>
-                 @Html.DisplayNameFor(model => model.Evenement[0].CodePostal)
-            </th> 
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.Evenement) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Titre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Auteur)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Categorie.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateDebut)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateFin)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Annule)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Addresse)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ville)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CodePostal)
-            </td>  
-            <td>
-                @if(User.Identity?.Name == item.Auteur)
-                {
-                        if (item.Annule == false)
-                        {   
-                            <a asp-page="./Edit" asp-route-id="@item.Id">Modifier |</a>
-                            <a asp-page="./Delete" asp-route-id="@item.Id">Annuler |</a>
-                        }
-                }                
-                <a asp-page="./Details" asp-route-id="@item.Id">Détails</a>
-                
-            </td>
-        </tr>
+@if(Model.Evenement.Count == 0)
+{
+    <p>Vous n'avez encore créé aucun évèenement.</p>
 }
-    </tbody>
-</table>
+else
+{ 
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Evenement[0].Titre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Evenement[0].Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Evenement[0].Auteur)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Evenement[0].Categorie)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Evenement[0].DateDebut)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Evenement[0].DateFin)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Evenement[0].Annule)
+                </th> 
+                <th>
+                     @Html.DisplayNameFor(model => model.Evenement[0].Addresse)
+                </th>
+                <th>
+                     @Html.DisplayNameFor(model => model.Evenement[0].Ville)
+                </th>
+                <th>
+                     @Html.DisplayNameFor(model => model.Evenement[0].CodePostal)
+                </th> 
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model.Evenement) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Titre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Auteur)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Categorie.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateDebut)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateFin)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Annule)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Addresse)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ville)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CodePostal)
+                </td>  
+                <td>
+                    @if(User.Identity?.Name == item.Auteur)
+                    {
+                            if (item.Annule == false)
+                            {   
+                                <a asp-page="./Edit" asp-route-id="@item.Id">Modifier |</a>
+                                <a asp-page="./Delete" asp-route-id="@item.Id">Annuler |</a>
+                            }
+                    }                
+                    <a asp-page="./Details" asp-route-id="@item.Id">Détails</a>
+                
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>
+}

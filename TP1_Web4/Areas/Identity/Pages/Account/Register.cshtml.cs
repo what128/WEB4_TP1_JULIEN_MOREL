@@ -77,6 +77,8 @@ namespace TP1_Web4.Areas.Identity.Pages.Account
             [Required(ErrorMessage = "Le nom d'utilisateur est requis")]
             public string UserName { get; set; }
 
+            [RegularExpression(@"^[A-Z]\d[A-Z]\d[A-Z]\d$", ErrorMessage = "Le texte entré ne correspond pas à un code postal.")]
+            [Required(ErrorMessage = "Vous devez entrer un code postal")]
             public string CodePostal { get; set; }
 
 
@@ -138,7 +140,7 @@ namespace TP1_Web4.Areas.Identity.Pages.Account
 
                 if (result.Succeeded)
                 {
-                    await _userManager.AddToRoleAsync(user, "Admin");
+                    await _userManager.AddToRoleAsync(user, "Utilisateur");
                     //_logger.LogInformation("User created a new account with password.");
 
                     //var userId = await _userManager.GetUserIdAsync(user);

@@ -42,7 +42,15 @@ else
 							@if (User.Identity.IsAuthenticated)
 							{
 								<p class="card-text">Addresse: @unEvenement.Addresse</p>
-								<p class="card-text">Distance: @Model.Distances[unEvenement.Id].ToString() km</p>
+								
+								@if (Model.Distances[unEvenement.Id] == -1)
+								{
+									<p class="card-text">Impossible de calculer la distance entre vous et l'évènement pour le moment.</p>
+								}
+								else
+								{	
+									<p class="card-text">Distance: @Model.Distances[unEvenement.Id].ToString() km</p>
+								}
 							}
 							<a asp-page="/Evenements/Details" asp-route-id="@unEvenement.Id" class="btn btn-info mt-2">Voir les détails</a>
 						</div>
