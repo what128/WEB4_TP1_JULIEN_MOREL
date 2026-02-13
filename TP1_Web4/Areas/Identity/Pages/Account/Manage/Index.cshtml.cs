@@ -2,14 +2,16 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Encodings.Web;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using TP1_Web4.Models;
 
 namespace TP1_Web4.Areas.Identity.Pages.Account.Manage
@@ -18,13 +20,16 @@ namespace TP1_Web4.Areas.Identity.Pages.Account.Manage
     {
         private readonly UserManager<Utilisateur> _userManager;
         private readonly SignInManager<Utilisateur> _signInManager;
+        private readonly TP1_Web4.Data.ApplicationDbContext _context;
 
         public IndexModel(
             UserManager<Utilisateur> userManager,
-            SignInManager<Utilisateur> signInManager)
+            SignInManager<Utilisateur> signInManager,
+            TP1_Web4.Data.ApplicationDbContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _context = context;
         }
 
         /// <summary>
@@ -36,11 +41,20 @@ namespace TP1_Web4.Areas.Identity.Pages.Account.Manage
         [DisplayName("Nom d'utilisateur")]
         public string Username { get; set; }
 
+        [BindProperty]
         public string Nom { get; set; }
 
+        [BindProperty]
         public string Prenom { get; set; }
 
+        [BindProperty]
         public string CodePostal { get; set; }
+
+        [BindProperty]
+        public string Addresse { get; set; }
+
+        [BindProperty]
+        public string Ville { get; set; }
 
         /// <summary>
         ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
@@ -87,18 +101,26 @@ namespace TP1_Web4.Areas.Identity.Pages.Account.Manage
         public async Task<IActionResult> OnGetAsync()
         {
             var user = await _userManager.GetUserAsync(User);
+
+
             if (user == null)
             {
                 return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
             }
+            Nom = user.Nom;
+            Prenom = user.Prenom;
+            Addresse = user.Addresse;
+            Ville = user.Ville;
+            CodePostal = user.CodePostal;
 
             await LoadAsync(user);
             return Page();
         }
 
+
         public async Task<IActionResult> OnPostAsync()
         {
-            var user = await _userManager.GetUserAsync(User);
+            Utilisateur user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
                 return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
@@ -109,6 +131,25 @@ namespace TP1_Web4.Areas.Identity.Pages.Account.Manage
                 await LoadAsync(user);
                 return Page();
             }
+
+            if (!(string.IsNullOrEmpty(Nom)) && Nom != user.Nom)
+                user.Nom = Nom;
+
+            if (!(string.IsNullOrEmpty(Prenom)) && Prenom != user.Prenom)
+                user.Prenom = Prenom;
+
+            if (!(string.IsNullOrEmpty(Ville)) && Ville != user.Ville)
+                user.Ville = Ville;
+
+            if (!(string.IsNullOrEmpty(Addresse)) && Addresse != user.Addresse)
+                user.Addresse = Addresse;
+
+            if (!(string.IsNullOrEmpty(CodePostal)) && (Regex.IsMatch(CodePostal, @"^(?:[ABCEGHJKLMNPRSTVXY]\d){3}$")) && CodePostal != user.CodePostal)
+                user.CodePostal = CodePostal;
+
+            _context.Attach(user).State = EntityState.Modified;
+
+            await _context.SaveChangesAsync();
 
             var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
             if (Input.PhoneNumber != phoneNumber)

@@ -5,6 +5,22 @@
     ViewData["Title"] = "Mes évènements";
 }
 
+@if (TempData["Confirmation"] != null)
+{  
+    <div class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            @TempData["Confirmation"]
+   </div>
+}
+
+@if (TempData["Erreur"] != null)
+{  
+    <div class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            @TempData["Erreur"]
+   </div>
+}
+
 <h1>Mes Évènements</h1>
 
 <p>
@@ -12,7 +28,7 @@
 </p>
 @if(Model.Evenement.Count == 0)
 {
-    <p>Vous n'avez encore créé aucun évèenement.</p>
+    <p>Vous n'avez encore créé aucun évènement.</p>
 }
 else
 { 
@@ -24,9 +40,6 @@ else
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Evenement[0].Description)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Evenement[0].Auteur)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Evenement[0].Categorie)
@@ -62,9 +75,6 @@ else
                     @Html.DisplayFor(modelItem => item.Description)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Auteur)
-                </td>
-                <td>
                     @Html.DisplayFor(modelItem => item.Categorie.Id)
                 </td>
                 <td>
@@ -86,7 +96,7 @@ else
                     @Html.DisplayFor(modelItem => item.CodePostal)
                 </td>  
                 <td>
-                    @if(User.Identity?.Name == item.Auteur)
+                    @if(User.Identity?.Name == item.Auteur.UserName)
                     {
                             if (item.Annule == false)
                             {   

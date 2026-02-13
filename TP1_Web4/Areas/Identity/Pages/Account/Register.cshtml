@@ -27,6 +27,16 @@
                 <label asp-for="Input.UserName">Nom d'utilisateur</label>
                 <span asp-validation-for="Input.UserName" class="text-danger"></span>
             </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Addresse" class="form-control" aria-required="true" placeholder="123 rue principale" />
+                <label asp-for="Input.Addresse">Addresse</label>
+                <span asp-validation-for="Input.Addresse" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Ville" class="form-control" aria-required="true" placeholder="Roberval" />
+                <label asp-for="Input.Ville">Ville</label>
+                <span asp-validation-for="Input.Ville" class="text-danger"></span>
+            </div>
              <div class="form-floating mb-3">
                 <input asp-for="Input.CodePostal" class="form-control" aria-required="true" placeholder="G1E3G1" />
                 <label asp-for="Input.CodePostal">Code Postal</label>

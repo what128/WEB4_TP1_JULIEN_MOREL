@@ -35,6 +35,8 @@ namespace TP1_Web4.Pages.Evenements
 
             if (evenement is not null)
             {
+                if (Evenement.Auteur.UserName != User.Identity.Name)
+                    return Forbid();
                 Evenement = evenement;
 
                 return Page();
@@ -58,7 +60,7 @@ namespace TP1_Web4.Pages.Evenements
                 _context.Attach(Evenement).State = EntityState.Modified;
                 await _context.SaveChangesAsync();
             }
-
+            TempData["Confirmation"] = "L'évènement a bien été annulé.";
             return RedirectToPage("./Index");
         }
     }

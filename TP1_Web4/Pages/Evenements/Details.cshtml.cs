@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -16,16 +17,21 @@ namespace TP1_Web4.Pages.Evenements
         private readonly TP1_Web4.Data.ApplicationDbContext _context;
         private readonly HttpClient _httpClient;
         private readonly IConfiguration _configuration;
+        private readonly UserManager<Utilisateur> _userManager;
 
-        public DetailsModel(TP1_Web4.Data.ApplicationDbContext context, HttpClient httpClient, IConfiguration configuration)
+        public DetailsModel(TP1_Web4.Data.ApplicationDbContext context, HttpClient httpClient,
+            IConfiguration configuration, UserManager<Utilisateur> userManager)
         {
             _context = context;
             _httpClient = httpClient;
             _configuration = configuration;
+            _userManager = userManager;
         }
 
         public ApiEvenement Distance { get; set; }
         public Utilisateur Utilisateur { get; set; }
+
+        public  Utilisateur Usr { get; set; }
 
         public string ImageFolder { get; set; }
 
@@ -38,7 +44,7 @@ namespace TP1_Web4.Pages.Evenements
                 return NotFound();
             }
 
-            var evenement = await _context.Evenements.Include(e => e.Categorie).FirstOrDefaultAsync(m => m.Id == id);
+            var evenement = await _context.Evenements.Include(e => e.Categorie).Include(e => e.Auteur).FirstOrDefaultAsync(m => m.Id == id);
 
             if (evenement is not null)
             {
@@ -63,7 +69,8 @@ namespace TP1_Web4.Pages.Evenements
                         Distance.DistanceInKm = -1;
                     }
                     }
-
+                if (User.Identity.IsAuthenticated)
+                    Usr = await _userManager.GetUserAsync(User);
                 return Page();
             }
             else

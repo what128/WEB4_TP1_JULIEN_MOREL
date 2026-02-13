@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -21,22 +22,28 @@ namespace TP1_Web4.Pages.Evenements
         private readonly TP1_Web4.Data.ApplicationDbContext _context;
         private readonly IConfiguration _configuration;
         private readonly IWebHostEnvironment _environment;
+        private readonly UserManager<Utilisateur> _userManager;
 
-        public CreateModel(TP1_Web4.Data.ApplicationDbContext context, IConfiguration configuration, IWebHostEnvironment environment)
+        public CreateModel(TP1_Web4.Data.ApplicationDbContext context, IConfiguration configuration,
+            IWebHostEnvironment environment, UserManager<Utilisateur> userManager)
         {
             _context = context;
             _configuration = configuration;
             _environment = environment;
-        }
-
-        public IActionResult OnGet()
-        {
-        ViewData["CategorieId"] = new SelectList(_context.Categories.Where(c => c.Archive == false), "Id", "Nom");
-            return Page();
+            _userManager = userManager;
         }
 
         [BindProperty]
         public Evenement Evenement { get; set; } = default!;
+        public async Task<IActionResult> OnGet()
+        {
+            ViewData["CategorieId"] = new SelectList(_context.Categories.Where(c => c.Archive == false), "Id", "Nom");
+            Utilisateur user = await _userManager.GetUserAsync(User);
+            Evenement = new Evenement();
+            Evenement.AuteurId = user.Id;
+            return Page();
+        }
+
 
         public List<Evenement> Evenements { get; set; }
 
@@ -57,12 +64,21 @@ namespace TP1_Web4.Pages.Evenements
             if (Evenements.Count > 0)
             {
                 ModelState.AddModelError("", "Une évènement ayant des caractéristiques similaires existe déjà.");
+                ViewData["CategorieId"] = new SelectList(_context.Categories.Where(c => c.Archive == false), "Id", "Nom");
                 return Page();
             }
 
-            Evenement.Auteur = User.Identity.Name;
+            if (Evenement.DateFin <= Evenement.DateDebut)
+            {
+                ModelState.AddModelError("Evenement.DateFin", "La date de fin d'un évènement doit être plus tard que la date de début de celui-ci.");
+                ViewData["CategorieId"] = new SelectList(_context.Categories.Where(c => c.Archive == false), "Id", "Nom");
+                return Page();
+            }            
+            
             Evenement.Participants = new List<string>();
-            Evenement.Participants.Add(User.Identity.Name);
+            Utilisateur user = await _userManager.GetUserAsync(User);
+            Evenement.AuteurId = user.Id;
+            Evenement.Participants.Add(user.Id);
             Evenement.Annule = false;
             if (!ModelState.IsValid)
             {
@@ -76,6 +92,7 @@ namespace TP1_Web4.Pages.Evenements
             if (!allowedExtensions.Contains(extension))
             {
                 ModelState.AddModelError("ImageUpload", "L'image n'a pas une extension valide (.jpg, .jpeg, .png, .webp).");
+                ViewData["CategorieId"] = new SelectList(_context.Categories.Where(c => c.Archive == false), "Id", "Nom");
                 return Page();
             }
 
@@ -96,10 +113,9 @@ namespace TP1_Web4.Pages.Evenements
 
             Evenement.Image = fileName;
 
-
             _context.Evenements.Add(Evenement);
             await _context.SaveChangesAsync();
-
+            TempData["Confirmation"] = "L'évènement a bien été créé.";
             return RedirectToPage("./Index");
         }
     }

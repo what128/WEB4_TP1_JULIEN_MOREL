@@ -6,7 +6,6 @@ namespace TP1_Web4.Data
 {
     public class DbInitializer
     {
-
         public static async Task Initialize(
            ApplicationDbContext context,
            UserManager<Utilisateur> userManager,
@@ -17,7 +16,7 @@ namespace TP1_Web4.Data
                 await roleManager.CreateAsync(new IdentityRole("Admin"));
                 await roleManager.CreateAsync(new IdentityRole("Utilisateur"));
             }
-
+            List<Utilisateur> usrs = new List<Utilisateur>();
             if (!await userManager.Users.AnyAsync())
             {
                 Utilisateur user = new Utilisateur()
@@ -26,10 +25,13 @@ namespace TP1_Web4.Data
                     Email = "rick@rick.com",
                     Nom = "Astley",
                     Prenom = "Rick",
-                    CodePostal = "G1K3B8"
+                    CodePostal = "G1K3B8",
+                    Addresse = "126 rue principale",
+                    Ville = "Québec"
                 };
                 await userManager.CreateAsync(user, "Password123!");
                 await userManager.AddToRoleAsync(user, "Admin");
+                usrs.Add(user);
 
                 Utilisateur user2 = new Utilisateur()
                 {
@@ -37,10 +39,13 @@ namespace TP1_Web4.Data
                     Email = "jumor010@edu.cegepgarneau.ca",
                     Nom = "Morel",
                     Prenom = "Julien",
-                    CodePostal = "G1H5B9"
+                    CodePostal = "G1H5B9",
+                    Addresse = "453 avenue Nérée-Tremblay",
+                    Ville = "Sainte-Foy"
                 };
                 await userManager.CreateAsync(user2, "Password123!");
                 await userManager.AddToRoleAsync(user2, "Admin");
+                usrs.Add(user2);
 
                 Utilisateur user3 = new Utilisateur()
                 {
@@ -48,10 +53,13 @@ namespace TP1_Web4.Data
                     Email = "lorem@ipsum.com",
                     Nom = "Ipsum",
                     Prenom = "Lorem",
-                    CodePostal = "G1E3G1"
+                    CodePostal = "G1E3G1",
+                    Addresse = "1660 boul de l'entente",
+                    Ville = "Sainte-Foy"
                 };
                 await userManager.CreateAsync(user3, "Password123!");
                 await userManager.AddToRoleAsync(user3, "Utilisateur");
+                usrs.Add(user3);
 
                 Utilisateur user4 = new Utilisateur()
                 {
@@ -59,10 +67,13 @@ namespace TP1_Web4.Data
                     Email = "dolor@ismet.com",
                     Nom = "Ismet",
                     Prenom = "Dolor",
-                    CodePostal = "G1E2H3"
+                    CodePostal = "G1E2H3",
+                    Addresse = "123 rue principale",
+                    Ville = "Victoriaville"
                 };
                 await userManager.CreateAsync(user4, "Password123!");
                 await userManager.AddToRoleAsync(user4, "Utilisateur");
+                usrs.Add(user4);
             }
 
             if (!await context.Categories.AnyAsync())
@@ -87,11 +98,11 @@ namespace TP1_Web4.Data
                         Description = "Dolor sit amet",
                         Image = "default.jpg",
                         CategorieId = categorieIds[rnd.Next(categorieIds.Count)],
-                        Auteur = "rickastley69",
-                        Participants = new List<string> { "jumor010, rickastley69"},
+                        AuteurId = usrs[0].Id,
+                        Participants = new List<string> { usrs[0].Id, usrs[1].Id },
                         Annule = false,
-                        DateDebut = new DateTime(2026, 2, 10, 3, 52, 0),
-                        DateFin = new DateTime(2026, 2, 10, 5, 52, 0),
+                        DateDebut = new DateTime(2026, 2, 24, 3, 52, 0),
+                        DateFin = new DateTime(2026, 2, 26, 5, 52, 0),
                         Addresse = "330 52e rue ouest",
                         Ville = "Québec",
                         CodePostal = "G1H5B9"
@@ -102,8 +113,8 @@ namespace TP1_Web4.Data
                          Description = "Dolor sit amet 2",
                          Image = "default.jpg",
                          CategorieId = categorieIds[rnd.Next(categorieIds.Count)],
-                         Auteur = "jumor010",
-                         Participants = new List<string> { "jumor010, rickastley69" },
+                         AuteurId = usrs[1].Id,
+                         Participants = new List<string> { usrs[0].Id, usrs[1].Id },
                          Annule = false,
                          DateDebut = new DateTime(2026, 3, 11, 4, 53, 0),
                          DateFin = new DateTime(2026, 3, 11, 7, 54, 0),

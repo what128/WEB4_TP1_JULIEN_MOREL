@@ -48,6 +48,8 @@ namespace TP1_Web4.Pages.Evenements
             {
                 return NotFound();
             }
+            if (Evenement.Auteur.UserName != User.Identity.Name)
+                return Forbid();
             Evenement = evenement;
            ViewData["CategorieId"] = new SelectList(_context.Categories, "Id", "Id");
             return Page();
@@ -108,7 +110,7 @@ namespace TP1_Web4.Pages.Evenements
                     throw;
                 }
             }
-
+            TempData["Confirmation"] = "L'évènement a bien été modifié.";
             return RedirectToPage("./Index");
         }
 

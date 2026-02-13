@@ -39,7 +39,7 @@ namespace TP1_Web4.Areas.Admin.Pages.Shared.Categories
             Categorie.Archive = false;
             _context.Categories.Add(Categorie);
             await _context.SaveChangesAsync();
-
+            TempData["Confirmation"] = "La catégorie a bien été créée";
             return RedirectToPage("./Index");
         }
     }

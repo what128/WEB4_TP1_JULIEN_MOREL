@@ -19,7 +19,9 @@ namespace TP1_Web4.Models
         public string? Image { get; set; }
 
         [DisplayName("Organisateur")]
-        public string? Auteur { get; set; }
+        public string? AuteurId { get; set; }
+
+        public Utilisateur? Auteur { get; set; }
 
         public List<string>? Participants { get; set; }
 
@@ -39,7 +41,7 @@ namespace TP1_Web4.Models
         [Required(ErrorMessage = "La ville de l'évènement est requise.")]
         public string Ville { get; set; }
 
-        [RegularExpression(@"^[A-Z]\d[A-Z]\d[A-Z]\d$", ErrorMessage = "Le texte entré ne correspond pas à un code postal.")]
+        [RegularExpression(@"^(?:[ABCEGHJKLMNPRSTVXY]\d){3}$", ErrorMessage = "Le texte entré ne correspond pas à un code postal canadien valide.")]
         [DisplayName("Code postal")]
         public string CodePostal { get; set; }
     }

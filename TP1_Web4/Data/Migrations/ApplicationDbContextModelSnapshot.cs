@@ -192,8 +192,8 @@ namespace TP1_Web4.Data.Migrations
                     b.Property<bool?>("Annule")
                         .HasColumnType("bit");
 
-                    b.Property<string>("Auteur")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<string>("AuteurId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("CategorieId")
                         .HasColumnType("int");
@@ -228,6 +228,8 @@ namespace TP1_Web4.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("AuteurId");
+
                     b.HasIndex("CategorieId");
 
                     b.ToTable("Evenements");
@@ -240,6 +242,10 @@ namespace TP1_Web4.Data.Migrations
 
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
+
+                    b.Property<string>("Addresse")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CodePostal")
                         .IsRequired()
@@ -296,6 +302,10 @@ namespace TP1_Web4.Data.Migrations
                     b.Property<string>("UserName")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("Ville")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -363,11 +373,17 @@ namespace TP1_Web4.Data.Migrations
 
             modelBuilder.Entity("TP1_Web4.Models.Evenement", b =>
                 {
+                    b.HasOne("TP1_Web4.Models.Utilisateur", "Auteur")
+                        .WithMany()
+                        .HasForeignKey("AuteurId");
+
                     b.HasOne("TP1_Web4.Models.Categorie", "Categorie")
                         .WithMany()
                         .HasForeignKey("CategorieId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Auteur");
 
                     b.Navigation("Categorie");
                 });

@@ -33,7 +33,8 @@ namespace TP1_Web4.Pages
         public async Task OnGet()
         {
             ImageFolder = _configuration["Images:PublicUrl"];
-            Evenements = await _context.Evenements.Include(e => e.Categorie).Where(e => e.DateDebut > DateTime.Now && e.Annule == false)
+            Evenements = await _context.Evenements.Include(e => e.Categorie).Include(e => e.Auteur).Where(e => e.DateDebut > DateTime.Now
+                && e.Annule == false)
                 .OrderBy(e => e.DateDebut).ThenBy(e => e.Titre).ToListAsync();
 
             Utilisateur = await _context.Users.FirstOrDefaultAsync(u => u.UserName == User.Identity.Name);

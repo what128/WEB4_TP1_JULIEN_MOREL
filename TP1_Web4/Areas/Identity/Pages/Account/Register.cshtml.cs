@@ -4,6 +4,7 @@
 
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -88,8 +89,14 @@ namespace TP1_Web4.Areas.Identity.Pages.Account
             /// </summary>
             [Required]
             [EmailAddress]
-            [Display(Name = "Email")]
+            [Display(Name = "Courriel")]
             public string Email { get; set; }
+
+            [Required]
+            public string Addresse { get; set; }
+
+            [Required]
+            public string Ville { get; set; }
 
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
@@ -126,14 +133,17 @@ namespace TP1_Web4.Areas.Identity.Pages.Account
             //ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                Utilisateurs  = _context.Users.Where(u => u.Email == Input.Email).ToList();
-                if (Utilisateurs.Count != 0)
+                Utilisateurs = _context.Users.Where(u => u.Email == Input.Email).ToList();
+                if (Utilisateurs.Count > 0)
                 {
-                    ModelState.AddModelError("UserName", "Ce nom d'utilisateur existe déjà.");
+                    ModelState.AddModelError("Input.Email", "Un utilisateur avec le même courriel existe déjà.");
+                    return Page();
                 }
                 
                 //var user = CreateUser();
-                var user = new Utilisateur() { UserName = Input.UserName, Email = Input.Email, Nom = Input.Nom, Prenom = Input.Prenom, CodePostal = Input.CodePostal };
+                var user = new Utilisateur() { UserName = Input.UserName, Email = Input.Email,
+                    Nom = Input.Nom, Prenom = Input.Prenom, CodePostal = Input.CodePostal,
+                    Addresse = Input.Addresse, Ville = Input.Ville };
                 //await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 //await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);

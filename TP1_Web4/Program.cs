@@ -51,6 +51,7 @@ using (var scope = app.Services.CreateScope())
 
 
 app.UseExceptionHandler("/Error");
+app.UseStatusCodePagesWithReExecute("/Error/{0}");
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

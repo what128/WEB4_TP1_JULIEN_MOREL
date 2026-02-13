@@ -65,7 +65,7 @@ namespace TP1_Web4.Areas.Admin.Pages.Shared.Categories
                     throw;
                 }
             }
-
+            TempData["Confirmation"] = "La catégorie a bien été modifiée";
             return RedirectToPage("./Index");
         }
 

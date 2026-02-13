@@ -23,7 +23,6 @@ namespace TP1_Web4.Pages
         public void OnGet(int? code)
         {
             StatusCode = code ?? 500;
-            //RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
         }
     }
 

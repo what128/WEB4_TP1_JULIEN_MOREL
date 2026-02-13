@@ -4,13 +4,30 @@
     ViewData["Title"] = "Home page";
 }
 
-<h1 class="text-center my-4">Liste des évènements</h1>
+@if (TempData["Confirmation"] != null)
+{  
+    <div class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            @TempData["Confirmation"]
+   </div>
+}
+
+@if (TempData["Erreur"] != null)
+{  
+    <div class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            @TempData["Erreur"]
+   </div>
+}
+
 @if (TempData["Message"] != null)
 {
 	<div>
 		<p>@TempData["Message"]</p>
 	</div>
 }
+
+<h1 class="text-center my-4">Liste des évènements</h1>
 
 @if (User.Identity.IsAuthenticated)
 {

@@ -25,25 +25,12 @@
             @Html.DisplayFor(model => model.Evenement.Description)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Evenement.Auteur)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Evenement.Auteur)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Evenement.Participants)
+            Nombre de participants
         </dt>
         <dd class="col-sm-10">
                 @if (Model.Evenement.Participants?.Count > 0)
                 {
-                    @for (int i = 0; i < Model.Evenement.Participants.Count; i++)
-                    {
-                        @Model.Evenement.Participants[i]
-                        @if (i < Model.Evenement.Participants.Count - 1)
-                        {
-                            <text>, </text>
-                        }
-                    }
+                    <text>@Model.Evenement.Participants.Count</text>
                 }
                 else
                 {
@@ -72,7 +59,14 @@
             @Html.DisplayNameFor(model => model.Evenement.Annule)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Evenement.Annule)
+            @if (Model.Evenement.Annule == true)
+            {
+                <text>Oui</text>
+            }
+            else
+            {
+                <text>Non</text>
+            }
         </dd> 
         @if (User.Identity.IsAuthenticated)
         {   
@@ -87,6 +81,12 @@
             </dt>
             <dd class="col-sm-10">
                 @Html.DisplayFor(model => model.Evenement.CodePostal)
+            </dd>
+             <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Evenement.Auteur)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Evenement.Auteur.UserName)
             </dd>
         }
         <dt class="col-sm-2">
@@ -112,11 +112,18 @@
                     @Model.Distance.DistanceInKm km
                 </dd>
             }
-			@if (Model.Evenement.Participants?.Contains(User.Identity.Name) == true)
+			@if (Model.Evenement.Participants?.Contains(Model.Usr.Id) == true)
 			{
-				<a class="btn btn-primary" asp-page="/Evenements/AnnulerParticipation" asp-route-id="@Model.Evenement.Id" class="btn btn-info mt-2">Annuler ma participation</a>
+                @if (Model.Evenement.AuteurId == Model.Usr.Id)
+                {
+                     <a class="btn btn-primary" asp-page="/Evenements/Delete" asp-route-id="@Model.Evenement.Id" class="btn btn-info mt-2">Annuler mon évènement</a>
+                }
+                else
+                {  
+                    <a class="btn btn-primary" asp-page="/Evenements/AnnulerParticipation" asp-route-id="@Model.Evenement.Id" class="btn btn-info mt-2">Annuler ma participation</a>
+                }
 			}
-			else if (Model.Evenement.Auteur != User.Identity.Name)
+			else if (Model.Evenement.Auteur.UserName != User.Identity.Name)
 			{
 				<a class="btn btn-primary" asp-page="/Evenements/Participer" asp-route-id="@Model.Evenement.Id" class="btn btn-info mt-2">Participer</a>	
 			}	
