@@ -24,6 +24,13 @@ namespace TP1_Web4.Pages.Evenements
         private readonly IWebHostEnvironment _environment;
         private readonly UserManager<Utilisateur> _userManager;
 
+        /// <summary>
+        ///  Initialise la page web Create avec les services nécessaires.
+        /// </summary>
+        /// <param name="context">Le contexte de la base de données</param>
+        /// <param name="configuration">la configuration de l'environnement hôte</param>
+        /// <param name="environment">Une variable représentant l'environnement hôte.</param>
+        /// <param name="userManager">Le gestionnaire des utilisateurs.</param>
         public CreateModel(TP1_Web4.Data.ApplicationDbContext context, IConfiguration configuration,
             IWebHostEnvironment environment, UserManager<Utilisateur> userManager)
         {
@@ -35,7 +42,12 @@ namespace TP1_Web4.Pages.Evenements
 
         [BindProperty]
         public Evenement Evenement { get; set; } = default!;
-        public async Task<IActionResult> OnGet()
+
+        /// <summary>
+        /// Charge le formulaire de création d'un évènement.
+        /// </summary>
+        /// <returns>Cette fonction sert à charger la page web en asynchrone et retourne quand elle finit cette tâche.</returns>
+        public async Task<IActionResult> OnGetAsync()
         {
             ViewData["CategorieId"] = new SelectList(_context.Categories.Where(c => c.Archive == false), "Id", "Nom");
             Utilisateur user = await _userManager.GetUserAsync(User);
@@ -52,7 +64,10 @@ namespace TP1_Web4.Pages.Evenements
         [Required(ErrorMessage = "Vous devez prendre une image")]
         public IFormFile ImageUpload { get; set; }
 
-        // For more information, see https://aka.ms/RazorPagesCRUD.
+        /// <summary>
+        /// Valide les informations de l'évènement, ajoute celui-ci dans la base de données, et redirige vers la page des évènements de l'utilisateur.
+        /// </summary>
+        /// <returns>Cette fonction sert à charger la page web en asynchrone et retourne quand elle finit cette tâche.</returns>
         public async Task<IActionResult> OnPostAsync()
         {
             Evenements = await _context.Evenements.Where(

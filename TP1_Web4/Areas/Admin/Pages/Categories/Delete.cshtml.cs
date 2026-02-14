@@ -15,6 +15,10 @@ namespace TP1_Web4.Areas.Admin.Pages.Shared.Categories
     {
         private readonly TP1_Web4.Data.ApplicationDbContext _context;
 
+        /// <summary>
+        ///  Initialise la page web Delete avec les services nécessaires.
+        /// </summary>
+        /// <param name="context">Le contexte de la base de données</param>
         public DeleteModel(TP1_Web4.Data.ApplicationDbContext context)
         {
             _context = context;
@@ -23,6 +27,11 @@ namespace TP1_Web4.Areas.Admin.Pages.Shared.Categories
         [BindProperty]
         public Categorie Categorie { get; set; } = default!;
 
+        /// <summary>
+        /// Charge le formulaire de confirmation de suppression d'une catégorie.
+        /// </summary>
+        /// <param name="id">L'id de la catégorie à archiver.</param>
+        /// <returns>Cette fonction sert à charger la page web en asynchrone et retourne quand elle finit cette tâche.</returns>
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)
@@ -42,6 +51,11 @@ namespace TP1_Web4.Areas.Admin.Pages.Shared.Categories
             return NotFound();
         }
 
+        /// <summary>
+        /// Archive la catégorie dans la base de données, et redirige vers la page des catégories disponibles.
+        /// </summary>
+        /// <param name="id">L'id de la catégorie à archiver.</param>
+        /// <returns>Cette fonction sert à charger la page web en asynchrone et retourne quand elle finit cette tâche.</returns>
         public async Task<IActionResult> OnPostAsync(int? id)
         {
             if (id == null)

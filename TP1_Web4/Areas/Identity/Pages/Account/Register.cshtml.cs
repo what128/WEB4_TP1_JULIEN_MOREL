@@ -31,6 +31,13 @@ namespace TP1_Web4.Areas.Identity.Pages.Account
         private readonly ILogger<RegisterModel> _logger;
         private readonly ApplicationDbContext _context;
 
+        /// <summary>
+        /// Initialise le modèle de la page de création d'un compte avec les services requis.
+        /// </summary>
+        /// <param name="userManager">Le gestionnaire des utilisateurs</param>
+        /// <param name="signInManager">Le gestionnaire de session</param>
+        /// <param name="logger">Le gestionnaire de journalisation</param>
+        /// <param name="context">Le contexte de la base de données</param>
         public RegisterModel(
             UserManager<Utilisateur> userManager,
             SignInManager<Utilisateur> signInManager,
@@ -103,9 +110,9 @@ namespace TP1_Web4.Areas.Identity.Pages.Account
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [Required]
-            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+            [StringLength(100, ErrorMessage = "Le {0} doit être entre {2} et {1} caractères de long.", MinimumLength = 6)]
             [DataType(DataType.Password)]
-            [Display(Name = "Password")]
+            [Display(Name = "Mot de passe")]
             public string Password { get; set; }
 
             /// <summary>
@@ -113,24 +120,33 @@ namespace TP1_Web4.Areas.Identity.Pages.Account
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [DataType(DataType.Password)]
-            [Display(Name = "Confirm password")]
-            [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+            [Display(Name = "Confirmer le mot de passe")]
+            [Compare("Password", ErrorMessage = "Le mot de passe et sa confirmation ne correspondent pas.")]
             public string ConfirmPassword { get; set; }
         }
 
         public List<Utilisateur> Utilisateurs { get; set; }
 
-
+        /// <summary>
+        /// Charge la page web de création d'un compte utilisateur.
+        /// </summary>
+        /// <param name="returnUrl">L'url à laquelle retourner après la connexion de l'utilisateur.</param>
+        /// <returns>Cette fonction sert à charger la page web en asynchrone et retourne quand elle finit cette tâche.</returns>
         public async Task OnGetAsync(string returnUrl = null)
         {
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
         }
 
+        /// <summary>
+        /// Valide les informations du nouveau compte utilisateur, le créée, se connecte à ce compte si la validation n'échoue pas, et
+        /// optionnellement redirige vers une url spécifique après la création du compte utilisateur.
+        /// </summary>
+        /// <param name="returnUrl">L'url à laquelle retourner après la création de l'utilisateur.</param>
+        /// <returns>Cette fonction sert à charger la page web en asynchrone et retourne quand elle finit cette tâche.</returns>
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             returnUrl ??= Url.Content("~/");
-            //ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
                 Utilisateurs = _context.Users.Where(u => u.Email == Input.Email).ToList();
@@ -140,40 +156,16 @@ namespace TP1_Web4.Areas.Identity.Pages.Account
                     return Page();
                 }
                 
-                //var user = CreateUser();
                 var user = new Utilisateur() { UserName = Input.UserName, Email = Input.Email,
                     Nom = Input.Nom, Prenom = Input.Prenom, CodePostal = Input.CodePostal,
                     Addresse = Input.Addresse, Ville = Input.Ville };
-                //await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
-                //await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
                 {
                     await _userManager.AddToRoleAsync(user, "Utilisateur");
-                    //_logger.LogInformation("User created a new account with password.");
-
-                    //var userId = await _userManager.GetUserIdAsync(user);
-                    //var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                    //code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
-                    //var callbackUrl = Url.Page(
-                    //    "/Account/ConfirmEmail",
-                    //    pageHandler: null,
-                    //    values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
-                    //    protocol: Request.Scheme);
-
-                    ////await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                    ////    $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
-
-                    //if (_userManager.Options.SignIn.RequireConfirmedAccount)
-                    //{
-                    //    return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });
-                    //}
-                    //else
-                    //{
-                        await _signInManager.SignInAsync(user, isPersistent: false);
-                        return LocalRedirect(returnUrl);
-                    //}
+                    await _signInManager.SignInAsync(user, isPersistent: false);
+                    return LocalRedirect(returnUrl);
                 }
                 foreach (var error in result.Errors)
                 {
@@ -184,28 +176,5 @@ namespace TP1_Web4.Areas.Identity.Pages.Account
             // If we got this far, something failed, redisplay form
             return Page();
         }
-
-        //private Utilisateur CreateUser()
-        //{
-        //    try
-        //    {
-        //        return Activator.CreateInstance<Utilisateur>();
-        //    }
-        //    catch
-        //    {
-        //        throw new InvalidOperationException($"Can't create an instance of '{nameof(Utilisateur)}'. " +
-        //            $"Ensure that '{nameof(Utilisateur)}' is not an abstract class and has a parameterless constructor, or alternatively " +
-        //            $"override the register page in /Areas/Identity/Pages/Account/Register.cshtml");
-        //    }
-        //}
-
-        //private IUserEmailStore<Utilisateur> GetEmailStore()
-        //{
-        //    if (!_userManager.SupportsUserEmail)
-        //    {
-        //        throw new NotSupportedException("The default UI requires a user store with email support.");
-        //    }
-        //    return (IUserEmailStore<Utilisateur>)_userStore;
-        //}
     }
 }

@@ -19,6 +19,12 @@ namespace TP1_Web4.Areas.Identity.Pages.Account.Manage
         private readonly SignInManager<Utilisateur> _signInManager;
         private readonly ILogger<ChangePasswordModel> _logger;
 
+        /// <summary>
+        /// Initialise la page de changement du mot de passe avec les services requis.
+        /// </summary>
+        /// <param name="userManager">Le gestionnaire des utilisateurs.</param>
+        /// <param name="signInManager">le gestionnaire de session.</param>
+        /// <param name="logger">Le gestionnaire de journalisation.</param>
         public ChangePasswordModel(
             UserManager<Utilisateur> userManager,
             SignInManager<Utilisateur> signInManager,
@@ -55,7 +61,7 @@ namespace TP1_Web4.Areas.Identity.Pages.Account.Manage
             /// </summary>
             [Required]
             [DataType(DataType.Password)]
-            [Display(Name = "Current password")]
+            [Display(Name = "Mot de passe courant")]
             public string OldPassword { get; set; }
 
             /// <summary>
@@ -63,9 +69,9 @@ namespace TP1_Web4.Areas.Identity.Pages.Account.Manage
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [Required]
-            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+            [StringLength(100, ErrorMessage = "Le {0} doit être entre {2} et {1} caractères de long.", MinimumLength = 6)]
             [DataType(DataType.Password)]
-            [Display(Name = "New password")]
+            [Display(Name = "Nouveau mot de passe")]
             public string NewPassword { get; set; }
 
             /// <summary>
@@ -73,17 +79,21 @@ namespace TP1_Web4.Areas.Identity.Pages.Account.Manage
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [DataType(DataType.Password)]
-            [Display(Name = "Confirm new password")]
-            [Compare("NewPassword", ErrorMessage = "The new password and confirmation password do not match.")]
+            [Display(Name = "Confirmer le nouveau mot de passe")]
+            [Compare("NewPassword", ErrorMessage = "Le mot de passe et sa confirmation ne correspondent pas.")]
             public string ConfirmPassword { get; set; }
         }
 
+        /// <summary>
+        /// Charge le formulaire de modification du mot de passe d'un utilisateur.
+        /// </summary>
+        /// <returns>Cette fonction sert à charger la page web en asynchrone et retourne quand elle finit cette tâche.</returns>
         public async Task<IActionResult> OnGetAsync()
         {
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
-                return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+                return NotFound($"Impossible de charger l'utilisateur avec l'ID '{_userManager.GetUserId(User)}'.");
             }
 
             var hasPassword = await _userManager.HasPasswordAsync(user);
@@ -95,6 +105,10 @@ namespace TP1_Web4.Areas.Identity.Pages.Account.Manage
             return Page();
         }
 
+        /// <summary>
+        /// Vérifie les informations saisies par l'utilisateur, et modifie son mot de passe dans la base de données si celles-ci sont correctes.
+        /// </summary>
+        /// <returns>Cette fonction sert à charger la page web en asynchrone et retourne quand elle finit cette tâche.</returns>
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
@@ -105,7 +119,7 @@ namespace TP1_Web4.Areas.Identity.Pages.Account.Manage
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
-                return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+                return NotFound($"Impossible de charger l'utilisateur avec l'ID '{_userManager.GetUserId(User)}'.");
             }
 
             var changePasswordResult = await _userManager.ChangePasswordAsync(user, Input.OldPassword, Input.NewPassword);
@@ -119,8 +133,8 @@ namespace TP1_Web4.Areas.Identity.Pages.Account.Manage
             }
 
             await _signInManager.RefreshSignInAsync(user);
-            _logger.LogInformation("User changed their password successfully.");
-            StatusMessage = "Your password has been changed.";
+            _logger.LogInformation("Le mot de passe a été changé avec succès.");
+            StatusMessage = "Votre mot de passe a été modifié.";
 
             return RedirectToPage();
         }

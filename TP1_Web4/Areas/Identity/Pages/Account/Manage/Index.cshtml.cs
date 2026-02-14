@@ -22,6 +22,12 @@ namespace TP1_Web4.Areas.Identity.Pages.Account.Manage
         private readonly SignInManager<Utilisateur> _signInManager;
         private readonly TP1_Web4.Data.ApplicationDbContext _context;
 
+        /// <summary>
+        /// Initialise la page de modification des informations générales de l'utilisateur avec les services requis.
+        /// </summary>
+        /// <param name="userManager">le gestionnaire des utilisateurs.</param>
+        /// <param name="signInManager">Le gestionnaire de session.</param>
+        /// <param name="context">Le contexte de la base de données.</param>
         public IndexModel(
             UserManager<Utilisateur> userManager,
             SignInManager<Utilisateur> signInManager,
@@ -85,12 +91,22 @@ namespace TP1_Web4.Areas.Identity.Pages.Account.Manage
             public string PhoneNumber { get; set; }
         }
 
+        /// <summary>
+        /// Charge les informations courantes de l'utilisateur dans les champs de modification des données.
+        /// </summary>
+        /// <param name="user">L'utilisateur à modifier</param>
+        /// <returns>Cette fonction sert à charger la page web en asynchrone et retourne quand elle finit cette tâche.</returns>
         private async Task LoadAsync(Utilisateur user)
         {
             var userName = await _userManager.GetUserNameAsync(user);
             var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
 
             Username = userName;
+            Nom = user.Nom;
+            Prenom = user.Prenom;
+            Addresse = user.Addresse;
+            Ville = user.Ville;
+            CodePostal = user.CodePostal;
 
             Input = new InputModel
             {
@@ -98,26 +114,28 @@ namespace TP1_Web4.Areas.Identity.Pages.Account.Manage
             };
         }
 
+        /// <summary>
+        /// Initialise la page de modification des informations générales de l'utilisateur.
+        /// </summary>
+        /// <returns>Cette fonction sert à charger la page web en asynchrone et retourne quand elle finit cette tâche.</returns>
         public async Task<IActionResult> OnGetAsync()
         {
             var user = await _userManager.GetUserAsync(User);
-
 
             if (user == null)
             {
                 return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
             }
-            Nom = user.Nom;
-            Prenom = user.Prenom;
-            Addresse = user.Addresse;
-            Ville = user.Ville;
-            CodePostal = user.CodePostal;
-
+           
             await LoadAsync(user);
             return Page();
         }
 
-
+        /// <summary>
+        /// Valide les informations entrés par l'utilisateur, modifie dans la base de données les informations qui diffèrent de ce qu'elles
+        /// étaient auparavant et qui sont valides, et informe l'utilisateur de la modification de ses informations de profil.
+        /// </summary>
+        /// <returns>Cette fonction sert à charger la page web en asynchrone et retourne quand elle finit cette tâche.</returns>
         public async Task<IActionResult> OnPostAsync()
         {
             Utilisateur user = await _userManager.GetUserAsync(User);

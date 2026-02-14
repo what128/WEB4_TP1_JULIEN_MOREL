@@ -19,6 +19,13 @@ namespace TP1_Web4.Pages.Evenements
         private readonly IConfiguration _configuration;
         private readonly UserManager<Utilisateur> _userManager;
 
+        /// <summary>
+        ///  Initialise la page web Details avec les services nécessaires.
+        /// </summary>
+        /// <param name="context">Le contexte de la base de données</param>
+        /// <param name="configuration">la configuration de l'environnement hôte</param>
+        /// <param name="httpClient">Une variable client http qui permet d'effectuer des requêtes avec ce protocole.</param>
+        /// <param name="userManager">Le gestionnaire des utilisateurs.</param>
         public DetailsModel(TP1_Web4.Data.ApplicationDbContext context, HttpClient httpClient,
             IConfiguration configuration, UserManager<Utilisateur> userManager)
         {
@@ -37,6 +44,11 @@ namespace TP1_Web4.Pages.Evenements
 
         public Evenement Evenement { get; set; } = default!;
 
+        /// <summary>
+        /// Charge la page web des détails d'un évènement.
+        /// </summary>
+        /// <param name="id">L'id de l'évènement à consulter.</param>
+        /// <returns>Cette fonction sert à charger la page web en asynchrone et retourne quand elle finit cette tâche.</returns>
         public async Task<IActionResult> OnGetAsync(Guid? id)
         {
             if (id == null)

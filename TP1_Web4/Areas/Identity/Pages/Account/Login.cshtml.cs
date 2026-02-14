@@ -26,6 +26,12 @@ namespace TP1_Web4.Areas.Identity.Pages.Account
         private readonly ILogger<LoginModel> _logger;
         private readonly ApplicationDbContext _context;
 
+        /// <summary>
+        /// Initialise le modèle de la page de connexion avec les services requis.
+        /// </summary>
+        /// <param name="signInManager">le gestionnaire de session.</param>
+        /// <param name="logger">Le gestionnaire de journalisation.</param>
+        /// <param name="context">le contexte de la base de données.</param>
         public LoginModel(SignInManager<Utilisateur> signInManager, ILogger<LoginModel> logger, ApplicationDbContext context)
         {
             _signInManager = signInManager;
@@ -89,6 +95,11 @@ namespace TP1_Web4.Areas.Identity.Pages.Account
             public bool RememberMe { get; set; }
         }
 
+        /// <summary>
+        /// Charge la page web de connexion au site web à partir d'un compte utilisateur.
+        /// </summary>
+        /// <param name="returnUrl">L'url à laquelle retourner après la connexion de l'utilisateur.</param>
+        /// <returns>Cette fonction sert à charger la page web en asynchrone et retourne quand elle finit cette tâche.</returns>
         public async Task OnGetAsync(string returnUrl = null)
         {
             if (!string.IsNullOrEmpty(ErrorMessage))
@@ -98,7 +109,6 @@ namespace TP1_Web4.Areas.Identity.Pages.Account
 
             returnUrl ??= Url.Content("~/");
 
-            // Clear the existing external cookie to ensure a clean login process
             await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
 
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
@@ -108,6 +118,12 @@ namespace TP1_Web4.Areas.Identity.Pages.Account
 
         public Utilisateur? Utilisateur { get; set; }
 
+        /// <summary>
+        /// Valide les informations de connexion pour un utilisateur, se connecte à ce compte si la validation n'échoue pas, et
+        /// optionnellement redirige vers une url spécifique après la connexion au compte utilisateur.
+        /// </summary>
+        /// <param name="returnUrl">L'url à laquelle retourner après la connexion de l'utilisateur.</param>
+        /// <returns>Cette fonction sert à charger la page web en asynchrone et retourne quand elle finit cette tâche.</returns>
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             returnUrl ??= Url.Content("~/");

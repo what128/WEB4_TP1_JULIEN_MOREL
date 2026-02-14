@@ -16,113 +16,153 @@ namespace TP1_Web4.Data
                 await roleManager.CreateAsync(new IdentityRole("Admin"));
                 await roleManager.CreateAsync(new IdentityRole("Utilisateur"));
             }
+
             List<Utilisateur> usrs = new List<Utilisateur>();
+
+            // =============================
+            // CRÉATION DES UTILISATEURS
+            // =============================
             if (!await userManager.Users.AnyAsync())
             {
-                Utilisateur user = new Utilisateur()
+                var utilisateurs = new List<Utilisateur>
                 {
-                    UserName = "rickastley69",
-                    Email = "rick@rick.com",
-                    Nom = "Astley",
-                    Prenom = "Rick",
-                    CodePostal = "G1K3B8",
-                    Addresse = "126 rue principale",
-                    Ville = "Québec"
+                    new Utilisateur
+                    {
+                        UserName = "admin",
+                        Email = "admin@cegepgarneau.ca",
+                        Nom = "Admin",
+                        Prenom = "Principal",
+                        CodePostal = "G1K3B8",
+                        Addresse = "100 rue Admin",
+                        Ville = "Québec"
+                    },
+                    new Utilisateur
+                    {
+                        UserName = "user1",
+                        Email = "user1@test.com",
+                        Nom = "Tremblay",
+                        Prenom = "Jean",
+                        CodePostal = "G1H5B9",
+                        Addresse = "200 rue A",
+                        Ville = "Québec"
+                    },
+                    new Utilisateur
+                    {
+                        UserName = "user2",
+                        Email = "user2@test.com",
+                        Nom = "Gagnon",
+                        Prenom = "Marie",
+                        CodePostal = "G1E3G1",
+                        Addresse = "300 rue B",
+                        Ville = "Lévis"
+                    },
+                    new Utilisateur
+                    {
+                        UserName = "user3",
+                        Email = "user3@test.com",
+                        Nom = "Roy",
+                        Prenom = "Alex",
+                        CodePostal = "G1S4K2",
+                        Addresse = "400 rue C",
+                        Ville = "Sainte-Foy"
+                    },
+                    new Utilisateur
+                    {
+                        UserName = "user4",
+                        Email = "user4@test.com",
+                        Nom = "Bouchard",
+                        Prenom = "Sophie",
+                        CodePostal = "G1M2L3",
+                        Addresse = "500 rue D",
+                        Ville = "Victoriaville"
+                    }
                 };
-                await userManager.CreateAsync(user, "Password123!");
-                await userManager.AddToRoleAsync(user, "Admin");
-                usrs.Add(user);
 
-                Utilisateur user2 = new Utilisateur()
+                foreach (var user in utilisateurs)
                 {
-                    UserName = "jumor010",
-                    Email = "jumor010@edu.cegepgarneau.ca",
-                    Nom = "Morel",
-                    Prenom = "Julien",
-                    CodePostal = "G1H5B9",
-                    Addresse = "453 avenue Nérée-Tremblay",
-                    Ville = "Sainte-Foy"
-                };
-                await userManager.CreateAsync(user2, "Password123!");
-                await userManager.AddToRoleAsync(user2, "Admin");
-                usrs.Add(user2);
+                    await userManager.CreateAsync(user, "Password123!");
+                    usrs.Add(user);
+                }
 
-                Utilisateur user3 = new Utilisateur()
-                {
-                    UserName = "loremipsum69",
-                    Email = "lorem@ipsum.com",
-                    Nom = "Ipsum",
-                    Prenom = "Lorem",
-                    CodePostal = "G1E3G1",
-                    Addresse = "1660 boul de l'entente",
-                    Ville = "Sainte-Foy"
-                };
-                await userManager.CreateAsync(user3, "Password123!");
-                await userManager.AddToRoleAsync(user3, "Utilisateur");
-                usrs.Add(user3);
-
-                Utilisateur user4 = new Utilisateur()
-                {
-                    UserName = "dolorismet420",
-                    Email = "dolor@ismet.com",
-                    Nom = "Ismet",
-                    Prenom = "Dolor",
-                    CodePostal = "G1E2H3",
-                    Addresse = "123 rue principale",
-                    Ville = "Victoriaville"
-                };
-                await userManager.CreateAsync(user4, "Password123!");
-                await userManager.AddToRoleAsync(user4, "Utilisateur");
-                usrs.Add(user4);
+                // Attribution des rôles
+                await userManager.AddToRoleAsync(utilisateurs[0], "Admin");
+                for (int i = 1; i < utilisateurs.Count; i++)
+                    await userManager.AddToRoleAsync(utilisateurs[i], "Utilisateur");
+            }
+            else
+            {
+                usrs = await userManager.Users.ToListAsync();
             }
 
+            // =============================
+            // CATÉGORIES (min 5)
+            // =============================
             if (!await context.Categories.AnyAsync())
             {
-                await context.AddRangeAsync(new Categorie { Nom = "Spectacle" },
+                await context.AddRangeAsync(
+                    new Categorie { Nom = "Spectacle" },
                     new Categorie { Nom = "Fête" },
                     new Categorie { Nom = "Funérailles" },
                     new Categorie { Nom = "Concert" },
-                    new Categorie { Nom = "Exposition" });
+                    new Categorie { Nom = "Exposition" }
+                );
+
                 await context.SaveChangesAsync();
             }
 
-
+            // =============================
+            // ÉVÉNEMENTS (2 par catégorie)
+            // =============================
             if (!await context.Evenements.AnyAsync())
             {
                 Random rnd = new Random();
-                var categorieIds = await context.Categories.Select(c => c.Id).ToListAsync();
-                context.Evenements.AddRange(
-                    new Evenement
+                var categories = await context.Categories.ToListAsync();
+                List<Evenement> evenements = new List<Evenement>();
+
+                foreach (var cat in categories)
+                {
+                    for (int i = 1; i <= 2; i++)
                     {
-                        Titre = "Lorem Ipsum",
-                        Description = "Dolor sit amet",
-                        Image = "default.jpg",
-                        CategorieId = categorieIds[rnd.Next(categorieIds.Count)],
-                        AuteurId = usrs[0].Id,
-                        Participants = new List<string> { usrs[0].Id, usrs[1].Id },
-                        Annule = false,
-                        DateDebut = new DateTime(2026, 2, 24, 3, 52, 0),
-                        DateFin = new DateTime(2026, 2, 26, 5, 52, 0),
-                        Addresse = "330 52e rue ouest",
-                        Ville = "Québec",
-                        CodePostal = "G1H5B9"
-                    },
-                     new Evenement
-                     {
-                         Titre = "Lorem Ipsum 2",
-                         Description = "Dolor sit amet 2",
-                         Image = "default.jpg",
-                         CategorieId = categorieIds[rnd.Next(categorieIds.Count)],
-                         AuteurId = usrs[1].Id,
-                         Participants = new List<string> { usrs[0].Id, usrs[1].Id },
-                         Annule = false,
-                         DateDebut = new DateTime(2026, 3, 11, 4, 53, 0),
-                         DateFin = new DateTime(2026, 3, 11, 7, 54, 0),
-                         Addresse = "1660 boul de l'Entente",
-                         Ville = "Sainte-Foy",
-                         CodePostal = "G1S4K2"
-                     }
-                    );
+                        var auteur = usrs[rnd.Next(usrs.Count)];
+
+                        evenements.Add(new Evenement
+                        {
+                            Titre = $"{cat.Nom} #{i}",
+                            Description = $"Description de {cat.Nom} #{i}",
+                            Image = "default.jpg",
+                            CategorieId = cat.Id,
+                            AuteurId = auteur.Id,
+                            Annule = false,
+                            DateDebut = DateTime.Now.AddDays(rnd.Next(1, 60)),
+                            DateFin = DateTime.Now.AddDays(rnd.Next(61, 120)),
+                            Addresse = $"{rnd.Next(100, 999)} rue Exemple",
+                            Ville = "Québec",
+                            CodePostal = "G1K3B8",
+                            Participants = new List<string> {auteur.Id}
+                        });
+                    }
+                }
+
+                // Sauvegarder d'abord pour générer les Id
+                await context.Evenements.AddRangeAsync(evenements);
+                await context.SaveChangesAsync();
+
+                var allEvents = await context.Evenements.ToListAsync();
+
+                foreach (var user in usrs)
+                {
+                    var selectedEvents = allEvents
+                        .OrderBy(x => rnd.Next())
+                        .Where(x=> x.Participants.Contains(user.Id) == false)
+                        .Take(2)
+                        .ToList();
+
+                    foreach (var ev in selectedEvents)
+                    {
+                        if (!ev.Participants.Contains(user.Id))
+                            ev.Participants.Add(user.Id);
+                    }
+                }
                 await context.SaveChangesAsync();
             }
         }

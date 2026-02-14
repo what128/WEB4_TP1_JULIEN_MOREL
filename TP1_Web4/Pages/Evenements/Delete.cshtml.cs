@@ -16,6 +16,10 @@ namespace TP1_Web4.Pages.Evenements
     {
         private readonly TP1_Web4.Data.ApplicationDbContext _context;
 
+        /// <summary>
+        ///  Initialise la page web Delete avec les services nécessaires.
+        /// </summary>
+        /// <param name="context">Le contexte de la base de données</param>
         public DeleteModel(TP1_Web4.Data.ApplicationDbContext context)
         {
             _context = context;
@@ -24,6 +28,11 @@ namespace TP1_Web4.Pages.Evenements
         [BindProperty]
         public Evenement Evenement { get; set; } = default!;
 
+        /// <summary>
+        /// Charge le formulaire de confirmation de suppression d'un évènement.
+        /// </summary>
+        /// <param name="id">L'id de l'évènement à archiver.</param>
+        /// <returns>Cette fonction sert à charger la page web en asynchrone et retourne quand elle finit cette tâche.</returns>
         public async Task<IActionResult> OnGetAsync(Guid? id)
         {
             if (id == null)
@@ -45,6 +54,11 @@ namespace TP1_Web4.Pages.Evenements
             return NotFound();
         }
 
+        /// <summary>
+        /// Archive l'évènement dans la base de données, et redirige vers la page des évènements de l'utilisateur.
+        /// </summary>
+        /// <param name="id">L'id de l'évènement à archiver.</param>
+        /// <returns>Cette fonction sert à charger la page web en asynchrone et retourne quand elle finit cette tâche.</returns>
         public async Task<IActionResult> OnPostAsync(Guid? id)
         {
             if (id == null)

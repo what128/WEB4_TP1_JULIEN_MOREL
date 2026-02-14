@@ -22,6 +22,12 @@ namespace TP1_Web4.Pages.Evenements
         private readonly IConfiguration _configuration;
         private readonly IWebHostEnvironment _environment;
 
+        /// <summary>
+        ///  Initialise la page web Edit avec les services nécessaires.
+        /// </summary>
+        /// <param name="context">Le contexte de la base de données</param>
+        /// <param name="configuration">la configuration de l'environnement hôte</param>
+        /// <param name="environment">Une variable représentant l'environnement hôte.</param>
         public EditModel(TP1_Web4.Data.ApplicationDbContext context, IConfiguration configuration, IWebHostEnvironment environment)
         {
             _context = context;
@@ -36,6 +42,12 @@ namespace TP1_Web4.Pages.Evenements
         [DisplayName("Image")]
         public IFormFile? ImageUpload { get; set; }
 
+
+        /// <summary>
+        /// Charge le formulaire de modification d'un évènement.
+        /// </summary>
+        /// <param name="id">L'id de l'évènement à modifier</param>
+        /// <returns>Cette fonction sert à charger la page web en asynchrone et retourne quand elle finit cette tâche.</returns>
         public async Task<IActionResult> OnGetAsync(Guid? id)
         {
             if (id == null)
@@ -55,8 +67,10 @@ namespace TP1_Web4.Pages.Evenements
             return Page();
         }
 
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more information, see https://aka.ms/RazorPagesCRUD.
+        /// <summary>
+        /// Valide les informations de l'évènement, modifie celui-ci dans la base de données, et redirige vers la page des évènements de l'utilisateur.
+        /// </summary>
+        /// <returns>Cette fonction sert à charger la page web en asynchrone et retourne quand elle finit cette tâche.</returns>
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
@@ -114,6 +128,11 @@ namespace TP1_Web4.Pages.Evenements
             return RedirectToPage("./Index");
         }
 
+        /// <summary>
+        /// Vérifie si un évènement existe dans la base de données.
+        /// </summary>
+        /// <param name="id">L'id de l'évènement à rechercher.</param>
+        /// <returns>Vrai si l'évènement existe, faux autrement.</returns>
         private bool EvenementExists(Guid id)
         {
             return _context.Evenements.Any(e => e.Id == id);

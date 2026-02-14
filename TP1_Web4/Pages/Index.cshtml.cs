@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System.Text.RegularExpressions;
 using TP1_Web4.Data;
 using TP1_Web4.Data.Migrations;
 using TP1_Web4.Models;
@@ -30,12 +32,66 @@ namespace TP1_Web4.Pages
 
         public string ImageFolder { get; set; }
 
-        public async Task OnGet()
+        public List<Categorie> Categories { get; set; }
+
+        [BindProperty]
+        public int CategorieId { get; set; }
+
+        [BindProperty]
+        public string Contenu { get; set; }
+
+        /// <summary>
+        /// Méthode exécutée lors de la recherche des évènements
+        /// </summary>
+        /// <returns>La page rafraîchie avec les éléments qui correspondent aux critères de recherche.</returns>
+        public async Task<IActionResult> OnPost()
         {
+            if (string.IsNullOrEmpty(Contenu))
+                return Page();
+            TempData["CategorieIdRecherche"] = CategorieId;
+            TempData["ContenuRecherche"] = Contenu;
+            return RedirectToPage($"/Index");
+        }
+
+        /// <summary>
+        /// Charge le contenu de la page d'accueil, en ayant filtré les résultats de recherche, les évènements qui sont dans le futur
+        /// et ceux qui ne sont pas annulés.
+        /// </summary>
+        /// <returns>Cette fonction sert à charger la page web en asynchrone et retourne quand elle finit cette tâche.</returns>
+        public async Task OnGetAsync()
+        {
+            int? idCategorie = null;
+            string? contenu = "";
+            if (TempData["CategorieIdRecherche"] is not null && TempData["ContenuRecherche"] is not null)
+            {
+                idCategorie = (int)TempData["CategorieIdRecherche"];
+                contenu = TempData["ContenuRecherche"].ToString();
+            }
             ImageFolder = _configuration["Images:PublicUrl"];
-            Evenements = await _context.Evenements.Include(e => e.Categorie).Include(e => e.Auteur).Where(e => e.DateDebut > DateTime.Now
-                && e.Annule == false)
-                .OrderBy(e => e.DateDebut).ThenBy(e => e.Titre).ToListAsync();
+            Categories = await _context.Categories.Where(c => c.Archive == false).ToListAsync();
+            if (idCategorie is not null && !(string.IsNullOrEmpty(contenu)))
+            {
+                if (idCategorie == -1)
+                {
+                    Evenements = await _context.Evenements.Include(e => e.Categorie).Include(e => e.Auteur).Where(e => e.DateDebut > DateTime.Now
+                      && e.Annule == false && (e.Description.ToLower().Contains(contenu.ToLower()) ||
+                      (e.Titre.ToLower().Contains(contenu.ToLower()))))
+                      .OrderBy(e => e.DateDebut).ThenBy(e => e.Titre).ToListAsync();
+                }
+                else
+                {
+                    Evenements = await _context.Evenements.Include(e => e.Categorie).Include(e => e.Auteur).Where(e => e.DateDebut > DateTime.Now
+                     && e.Annule == false && e.CategorieId == idCategorie && (e.Description.ToLower().Contains(contenu.ToLower()) ||
+                     (e.Titre.ToLower().Contains(contenu.ToLower()))))
+                     .OrderBy(e => e.DateDebut).ThenBy(e => e.Titre).ToListAsync();
+                }
+            }
+            else
+            { 
+                Evenements = await _context.Evenements.Include(e => e.Categorie).Include(e => e.Auteur).Where(e => e.DateDebut > DateTime.Now
+                    && e.Annule == false)
+                    .OrderBy(e => e.DateDebut).ThenBy(e => e.Titre).ToListAsync();
+            }
 
             Utilisateur = await _context.Users.FirstOrDefaultAsync(u => u.UserName == User.Identity.Name);
             if (Utilisateur is not null)
@@ -60,9 +116,6 @@ namespace TP1_Web4.Pages
                     Distances.Add(e.Id, Distance.DistanceInKm);
                 }
             }
-
-            //var result = await _roleManager.CreateAsync(new IdentityRole("Utilisateur"));
-            //var result2 = await _roleManager.CreateAsync(new IdentityRole("Admin"));
         }
     }
 }

@@ -83,9 +83,18 @@ else
                 <td>
                     @Html.DisplayFor(modelItem => item.DateFin)
                 </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Annule)
-                </td>
+                @if (item.Annule == true)
+                    {
+                       <td>
+                            Oui
+                        </td> 
+                    }
+                    else
+                    {   
+                        <td>
+                            Non
+                        </td>
+                    }
                 <td>
                     @Html.DisplayFor(modelItem => item.Addresse)
                 </td>

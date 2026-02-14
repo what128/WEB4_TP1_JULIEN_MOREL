@@ -20,6 +20,12 @@ namespace TP1_Web4.Pages
         }
 
         public int StatusCode { get; set; }
+
+        /// <summary>
+        /// Charge la page d'erreur à partir du code d'erreur passé en paramètre. Si le code d'erreur n'est pas reconnu,
+        /// cette page web utilisera le code 500.
+        /// </summary>
+        /// <param name="code">Le code de l'erreur qui est survenue.</param>
         public void OnGet(int? code)
         {
             StatusCode = code ?? 500;

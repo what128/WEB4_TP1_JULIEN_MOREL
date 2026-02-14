@@ -18,12 +18,22 @@ namespace TP1_Web4.Areas.Identity.Pages.Account
         private readonly SignInManager<Utilisateur> _signInManager;
         private readonly ILogger<LogoutModel> _logger;
 
+        /// <summary>
+        /// Charge le modèle de la page de déconnexion avec les services requis.
+        /// </summary>
+        /// <param name="signInManager">Le gestionnaire de session.</param>
+        /// <param name="logger">Le gestionnaire de journalisation.</param>
         public LogoutModel(SignInManager<Utilisateur> signInManager, ILogger<LogoutModel> logger)
         {
             _signInManager = signInManager;
             _logger = logger;
         }
 
+        /// <summary>
+        /// Déconnecte l'utilisateur avec une session active.
+        /// </summary>
+        /// <param name="returnUrl">L'url à laquelle retourner après la déconnexion de l'utilisateur.</param>
+        /// <returns>Cette fonction sert à charger la page web en asynchrone et retourne quand elle finit cette tâche.</returns>
         public async Task<IActionResult> OnPost(string returnUrl = null)
         {
             await _signInManager.SignOutAsync();

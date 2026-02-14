@@ -29,6 +29,37 @@
 
 <h1 class="text-center my-4">Liste des évènements</h1>
 
+<div class="card shadow-sm p-3 mb-4">
+    <form asp-controller="Evenement" method="post">
+        <div class="row align-items-end">
+            <div class="col-md-4">
+                <label for="categorieId" class="form-label">Catégorie</label>
+                <select name="categorieId" id="categorieId" class="form-select" asp-for="CategorieId">
+                    <option value="-1">Tous</option>
+                    @if (Model.Categories != null)
+                    {
+                        foreach (Categorie categorie in Model.Categories)
+                        {
+                            <option value="@categorie.Id">
+                                @categorie.Nom
+                            </option>
+                        }
+                    }
+                </select>
+            </div>
+            <div class="col-md-5">
+                <label for="searchString" class="form-label">Recherche</label>
+                <input type="text" class="form-control" asp-for="Contenu" placeholder="Rechercher un évènement..." />
+            </div>
+            <div class="col-md-3 d-grid">
+                <button type="submit" class="btn btn-primary">
+                    Rechercher
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
 @if (User.Identity.IsAuthenticated)
 {
 	<div class="text-center">

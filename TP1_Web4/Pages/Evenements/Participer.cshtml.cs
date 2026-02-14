@@ -15,6 +15,11 @@ namespace TP1_Web4.Pages.Evenements
         private readonly TP1_Web4.Data.ApplicationDbContext _context;
         private readonly UserManager<Utilisateur> _userManager;
 
+        /// <summary>
+        /// Initialise la page web Participer avec les services nécessaires.
+        /// </summary>
+        /// <param name="context">L'accès à la base de données.</param>
+        /// <param name="userManager">Le gestionnaire d'utilisateur</param>
         public ParticiperModel(ApplicationDbContext context, UserManager<Utilisateur> userManager)
         {
             _context = context;
@@ -22,7 +27,13 @@ namespace TP1_Web4.Pages.Evenements
         }
 
         public Evenement? Evenement { get; set; }
-        public async Task<IActionResult> OnGet(Guid? id)
+
+        /// <summary>
+        /// Ajoute l'id de l'utilisateur dans la liste des participants d'un évènement, s'il n'est pas encore présent.
+        /// </summary>
+        /// <param name="id">L'id de l'évènement auquel participer</param>
+        /// <returns>La page web vers laquelle rediriger après l'ajout de la participation à l'évènement</returns>
+        public async Task<IActionResult> OnGetAsync(Guid? id)
         {
             Utilisateur user = await _userManager.GetUserAsync(User);
             Evenement = await _context.Evenements.FirstOrDefaultAsync(e => e.Id == id);
