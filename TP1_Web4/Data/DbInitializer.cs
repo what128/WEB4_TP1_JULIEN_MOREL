@@ -6,6 +6,13 @@ namespace TP1_Web4.Data
 {
     public class DbInitializer
     {
+        /// <summary>
+        /// Initialise la base de données, si elle est vide, avec des données de test.
+        /// </summary>
+        /// <param name="context">Le contexte de la base de données.</param>
+        /// <param name="userManager">Le gestionnaire des utilisateurs.</param>
+        /// <param name="roleManager">Le gestionnaire des rôles.</param>
+        /// <returns>Cette fonction sert à initialiser la base de données en asynchrone et retourne quand elle finit cette tâche.</returns>
         public static async Task Initialize(
            ApplicationDbContext context,
            UserManager<Utilisateur> userManager,
@@ -19,9 +26,6 @@ namespace TP1_Web4.Data
 
             List<Utilisateur> usrs = new List<Utilisateur>();
 
-            // =============================
-            // CRÉATION DES UTILISATEURS
-            // =============================
             if (!await userManager.Users.AnyAsync())
             {
                 var utilisateurs = new List<Utilisateur>
@@ -84,7 +88,6 @@ namespace TP1_Web4.Data
                     usrs.Add(user);
                 }
 
-                // Attribution des rôles
                 await userManager.AddToRoleAsync(utilisateurs[0], "Admin");
                 for (int i = 1; i < utilisateurs.Count; i++)
                     await userManager.AddToRoleAsync(utilisateurs[i], "Utilisateur");
@@ -94,9 +97,6 @@ namespace TP1_Web4.Data
                 usrs = await userManager.Users.ToListAsync();
             }
 
-            // =============================
-            // CATÉGORIES (min 5)
-            // =============================
             if (!await context.Categories.AnyAsync())
             {
                 await context.AddRangeAsync(
@@ -110,9 +110,6 @@ namespace TP1_Web4.Data
                 await context.SaveChangesAsync();
             }
 
-            // =============================
-            // ÉVÉNEMENTS (2 par catégorie)
-            // =============================
             if (!await context.Evenements.AnyAsync())
             {
                 Random rnd = new Random();
@@ -143,7 +140,6 @@ namespace TP1_Web4.Data
                     }
                 }
 
-                // Sauvegarder d'abord pour générer les Id
                 await context.Evenements.AddRangeAsync(evenements);
                 await context.SaveChangesAsync();
 

@@ -22,6 +22,14 @@ namespace TP1_Web4.Pages
 
         public Utilisateur Utilisateur { get; set; }
         public Dictionary<Guid, double> Distances { get; set; }
+        
+        /// <summary>
+        /// Initialise le modèle de la page de la liste des évènements avec les services requis.
+        /// </summary>
+        /// <param name="context">le contexte de la base de données.</param>
+        /// <param name="roleManager">Le gestionnaire des rôles.</param>
+        /// <param name="configuration">La configuration de l'enviornement hôte.</param>
+        /// <param name="httpClient">Un objet client http, pour pouvoir effectuer des requêtes avec ce protocole.</param>
         public IndexModel(ApplicationDbContext context, RoleManager<IdentityRole> roleManager, IConfiguration configuration, HttpClient httpClient)
         {
             _context = context;
