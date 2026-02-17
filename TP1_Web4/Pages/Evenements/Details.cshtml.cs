@@ -35,6 +35,9 @@ namespace TP1_Web4.Pages.Evenements
             _userManager = userManager;
         }
 
+        [BindProperty]
+        public int Id { get; set; }
+
         public ApiEvenement Distance { get; set; }
         public Utilisateur Utilisateur { get; set; }
 
@@ -44,6 +47,44 @@ namespace TP1_Web4.Pages.Evenements
 
         public Evenement Evenement { get; set; } = default!;
 
+        /// <summary>
+        /// Retire l'id de l'utilisateur dans la liste des participants d'un évènement, s'il est présent.
+        /// </summary>
+        /// <param name="id">L'id de l'évènement auquel annuler la participation de l'utilisateur.</param>
+        /// <returns>La page web vers laquelle rediriger après la suppression de la participation à l'évènement</returns>
+        public async Task<IActionResult> OnPostAnnulerParticipation(Guid id)
+        {
+            Utilisateur user = await _userManager.GetUserAsync(User);
+            Evenement = _context.Evenements.FirstOrDefault(e => e.Id == id);
+            if (Evenement is not null)
+            {
+                Evenement.Participants.Remove(user.Id);
+            }
+            _context.Attach(Evenement).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            TempData["Confirmation"] = "Votre participation à l'évènement a bien été retirée.";
+            return Redirect("/");
+        }
+
+        /// <summary>
+        /// Ajoute l'id de l'utilisateur dans la liste des participants d'un évènement, s'il n'est pas encore présent.
+        /// </summary>
+        /// <param name="id">L'id de l'évènement auquel participer</param>
+        /// <returns>La page web vers laquelle rediriger après l'ajout de la participation à l'évènement</returns>
+        public async Task<IActionResult> OnPostParticiper(Guid id)
+        {
+            Utilisateur user = await _userManager.GetUserAsync(User);
+            Evenement = await _context.Evenements.FirstOrDefaultAsync(e => e.Id == id);
+            if (Evenement is not null)
+            {
+                if (!(Evenement.Participants.Contains(user.Id)))
+                    Evenement.Participants.Add(user.Id);
+            }
+            _context.Attach(Evenement).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            TempData["Confirmation"] = "Vous participez désormais à cet évènement.";
+            return Redirect("/");
+        }
         /// <summary>
         /// Charge la page web des détails d'un évènement.
         /// </summary>

@@ -96,8 +96,15 @@ else
                 <td>
                     @Html.DisplayFor(modelItem => item.CodePostal)
                 </td>  
-                <td>  
-                    <a class="btn btn-primary mb-3" asp-page="./AnnulerParticipation" asp-route-id="@item.Id">Annuler Ma Participation</a>             
+                <td> 
+                       <form method="post"
+                        asp-page-handler="AnnulerParticipation"
+                        asp-route-id="@item.Id" class="mt-3">
+    
+                        <button type="submit" class="btn btn-primary mb-3">
+                            Annuler ma participation
+                        </button>
+                    </form>
                     <a class="btn btn-primary mb-3" asp-page="./Details" asp-route-id="@item.Id">Détails de l'évènement</a>
                 </td>
             </tr>

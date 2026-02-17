@@ -57,3 +57,9 @@ table th, table td{
 table td{
     border-bottom: 2px solid black;
 }
+
+dl dd, dl dt{
+    margin: 0 auto !important;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}

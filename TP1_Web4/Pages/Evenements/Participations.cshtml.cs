@@ -34,6 +34,25 @@ namespace TP1_Web4.Pages.Evenements
         public Utilisateur Utilisateur { get; set; }
 
         /// <summary>
+        /// Retire l'id de l'utilisateur dans la liste des participants d'un évènement, s'il est présent.
+        /// </summary>
+        /// <param name="id">L'id de l'évènement auquel annuler la participation de l'utilisateur.</param>
+        /// <returns>La page web vers laquelle rediriger après la suppression de la participation à l'évènement</returns>
+        public async Task<IActionResult> OnPostAnnulerParticipation(Guid id)
+        {
+            Utilisateur user = await _userManager.GetUserAsync(User);
+            Evenement unEvenement = _context.Evenements.FirstOrDefault(e => e.Id == id);
+            if (Evenement is not null)
+            {
+                unEvenement.Participants.Remove(user.Id);
+            }
+            _context.Attach(unEvenement).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            TempData["Confirmation"] = "Votre participation à l'évènement a bien été retirée.";
+            return Redirect("/");
+        }
+
+        /// <summary>
         /// Charge le formulaire de participations à des évènements de l'utilisateur.
         /// </summary>
         /// <returns>Cette fonction sert à charger la page web en asynchrone et retourne quand elle finit cette tâche.</returns>
