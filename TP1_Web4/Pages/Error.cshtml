@@ -4,21 +4,21 @@
     ViewData["Title"] = $"Erreur {Model.StatusCode}";
 }
 
-<h1>
+<h1 class="text-center">
    Erreur @Model.StatusCode
 </h1>
 
 @if(Model.StatusCode == 404)
 {
-    <p>Page introuvable</p>
+    <p class="text-center text-danger">Page introuvable</p>
 }
 else if(Model.StatusCode == 403)
 {
-    <p>Accès interdit</p>
+    <p class="text-center text-danger">Accès interdit</p>
 }
 else
 {
-    <p>Une erreur du serveur est survenue.</p>
+    <p class="text-center text-danger">Une erreur du serveur est survenue.</p>
 }
 
-<a href="/Index" class="btn btn-primary">Retourner à la page d'accueil</a>
+<a href="/Index" class="btn btn-primary d-block text-center m-auto w-25">Retourner à la page d'accueil</a>

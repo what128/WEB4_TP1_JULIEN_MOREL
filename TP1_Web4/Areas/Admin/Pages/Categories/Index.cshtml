@@ -2,7 +2,7 @@
 @model TP1_Web4.Areas.Admin.Pages.Shared.Categories.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Liste des catégories";
 }
 
 @if (TempData["Confirmation"] != null)
@@ -21,18 +21,16 @@
    </div>
 }
 
-<h1>Index</h1>
+<h1 class="text-center">Liste des catégories</h1>
 
-<p>
-    <a asp-page="Create">Créer une catégorie</a>
-</p>
+<a class="btn btn-primary mb-3 text-center m-auto d-block w-25" asp-page="Create">Créer une catégorie</a>
 <table class="table">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Categorie[0].Nom)
             </th>
-            <th></th>
+            <th>Options</th>
         </tr>
     </thead>
     <tbody>
@@ -42,9 +40,9 @@
                 @Html.DisplayFor(modelItem => item.Nom)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Modifier</a> |
-                <a asp-page="./Details" asp-route-id="@item.Id">Détails</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Supprimer</a>
+                <a class="btn btn-primary" asp-page="./Edit" asp-route-id="@item.Id">Modifier</a>
+                <a class="btn btn-primary" asp-page="./Details" asp-route-id="@item.Id">Détails</a>
+                <a class="btn btn-primary" asp-page="./Delete" asp-route-id="@item.Id">Supprimer</a>
             </td>
         </tr>
 }

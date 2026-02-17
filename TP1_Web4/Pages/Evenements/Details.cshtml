@@ -120,7 +120,10 @@
                 }
                 else
                 {  
-                    <a class="btn btn-primary text-center w-50" asp-page="/Evenements/AnnulerParticipation" asp-route-id="@Model.Evenement.Id" class="btn btn-info mt-2">Annuler ma participation</a>
+                    <form method="post" asp-page="/Evenements/AnnulerParticipation" asp-route-id="@Model.Evenement.Id">
+                        <input type="submit" class="btn btn-primary text-center w-50 mt-2" asp-route-id="@Model.Evenement.Id" value="Annuler ma participation"/>
+                    </form>
+                    <a class="btn btn-primary text-center w-50 mt-2" asp-page="/Evenements/AnnulerParticipation" asp-route-id="@Model.Evenement.Id">Annuler ma participation</a>
                 }
 			}
 			else if (Model.Evenement.Auteur.UserName != User.Identity.Name)

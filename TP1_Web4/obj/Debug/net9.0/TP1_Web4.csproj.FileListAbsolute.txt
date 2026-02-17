@@ -369,6 +369,7 @@ E:\Web4\TP1_JULIEN_MOREL\WEB4_TP1_JULIEN_MOREL\TP1_Web4\obj\Debug\net9.0\compres
 E:\Web4\TP1_JULIEN_MOREL\WEB4_TP1_JULIEN_MOREL\TP1_Web4\obj\Debug\net9.0\compressed\nezrqnk58p-muycvpuwrr.gz
 E:\Web4\TP1_JULIEN_MOREL\WEB4_TP1_JULIEN_MOREL\TP1_Web4\obj\Debug\net9.0\compressed\v0zgfp0y55-87fc7y1x7t.gz
 E:\Web4\TP1_JULIEN_MOREL\WEB4_TP1_JULIEN_MOREL\TP1_Web4\obj\Debug\net9.0\compressed\yfc7ypekbg-mlv21k5csn.gz
+E:\Web4\TP1_JULIEN_MOREL\WEB4_TP1_JULIEN_MOREL\TP1_Web4\obj\Debug\net9.0\compressed\wsvxkxx66a-22az4thjv6.gz
 E:\Web4\TP1_JULIEN_MOREL\WEB4_TP1_JULIEN_MOREL\TP1_Web4\obj\Debug\net9.0\compressed\63nodjwi96-61n19gt1b8.gz
 E:\Web4\TP1_JULIEN_MOREL\WEB4_TP1_JULIEN_MOREL\TP1_Web4\obj\Debug\net9.0\compressed\3nb8hj4vcj-xtxxf3hu2r.gz
 E:\Web4\TP1_JULIEN_MOREL\WEB4_TP1_JULIEN_MOREL\TP1_Web4\obj\Debug\net9.0\compressed\gfhkybvfng-bqjiyaj88i.gz
@@ -443,4 +444,3 @@ E:\Web4\TP1_JULIEN_MOREL\WEB4_TP1_JULIEN_MOREL\TP1_Web4\obj\Debug\net9.0\refint\
 E:\Web4\TP1_JULIEN_MOREL\WEB4_TP1_JULIEN_MOREL\TP1_Web4\obj\Debug\net9.0\TP1_Web4.pdb
 E:\Web4\TP1_JULIEN_MOREL\WEB4_TP1_JULIEN_MOREL\TP1_Web4\obj\Debug\net9.0\TP1_Web4.genruntimeconfig.cache
 E:\Web4\TP1_JULIEN_MOREL\WEB4_TP1_JULIEN_MOREL\TP1_Web4\obj\Debug\net9.0\ref\TP1_Web4.dll
-E:\Web4\TP1_JULIEN_MOREL\WEB4_TP1_JULIEN_MOREL\TP1_Web4\obj\Debug\net9.0\compressed\wsvxkxx66a-22az4thjv6.gz

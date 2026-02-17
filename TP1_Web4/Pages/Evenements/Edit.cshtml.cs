@@ -42,6 +42,8 @@ namespace TP1_Web4.Pages.Evenements
         [DisplayName("Image")]
         public IFormFile? ImageUpload { get; set; }
 
+        public string ImageFolder { get; set; }
+
 
         /// <summary>
         /// Charge le formulaire de modification d'un évènement.
@@ -55,14 +57,15 @@ namespace TP1_Web4.Pages.Evenements
                 return NotFound();
             }
 
-            var evenement =  await _context.Evenements.FirstOrDefaultAsync(m => m.Id == id);
+            var evenement =  await _context.Evenements.Include(e => e.Categorie).Include(e => e.Auteur).FirstOrDefaultAsync(m => m.Id == id);
             if (evenement == null)
             {
                 return NotFound();
             }
+            Evenement = evenement;
             if (Evenement.Auteur.UserName != User.Identity.Name)
                 return Forbid();
-            Evenement = evenement;
+            ImageFolder = _configuration["Images:PublicUrl"];
            ViewData["CategorieId"] = new SelectList(_context.Categories, "Id", "Id");
             return Page();
         }

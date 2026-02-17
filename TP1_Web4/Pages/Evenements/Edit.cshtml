@@ -5,12 +5,11 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
-
-<h4>Evenement</h4>
+<h1>Modifier l'évènement</h1>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-12">
+        <img src="@Model.ImageFolder@Model.Evenement.Image" alt="Image de l'évènement" class="text-center d-block m-auto w-50"/>
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Evenement.Id" />
@@ -65,14 +64,14 @@
                 <span asp-validation-for="Evenement.CodePostal" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Sauvegarder" class="btn btn-primary text-center m-auto d-block w-50 mb-3 mt-3" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="./Index">Back to List</a>
+    <a class="btn btn-primary text-center d-block m-auto w-50" asp-page="./Index">Retour à la liste</a>
 </div>
 
 @section Scripts {

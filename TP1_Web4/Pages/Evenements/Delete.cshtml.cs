@@ -40,13 +40,13 @@ namespace TP1_Web4.Pages.Evenements
                 return NotFound();
             }
 
-            var evenement = await _context.Evenements.FirstOrDefaultAsync(m => m.Id == id);
+            var evenement = await _context.Evenements.Include(e => e.Categorie).Include(e => e.Auteur).FirstOrDefaultAsync(m => m.Id == id);
 
             if (evenement is not null)
             {
+                Evenement = evenement;
                 if (Evenement.Auteur.UserName != User.Identity.Name)
                     return Forbid();
-                Evenement = evenement;
 
                 return Page();
             }
