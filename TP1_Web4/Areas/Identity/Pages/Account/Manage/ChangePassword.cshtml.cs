@@ -61,7 +61,7 @@ namespace TP1_Web4.Areas.Identity.Pages.Account.Manage
             /// </summary>
             [Required]
             [DataType(DataType.Password)]
-            [Display(Name = "Mot de passe courant")]
+            [Display(Name = "Mot de passe actuel")]
             public string OldPassword { get; set; }
 
             /// <summary>
@@ -71,7 +71,7 @@ namespace TP1_Web4.Areas.Identity.Pages.Account.Manage
             [Required]
             [StringLength(100, ErrorMessage = "Le {0} doit être entre {2} et {1} caractères de long.", MinimumLength = 6)]
             [DataType(DataType.Password)]
-            [Display(Name = "Nouveau mot de passe")]
+            [Display(Name = "Mot de passe")]
             public string NewPassword { get; set; }
 
             /// <summary>
@@ -79,7 +79,7 @@ namespace TP1_Web4.Areas.Identity.Pages.Account.Manage
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [DataType(DataType.Password)]
-            [Display(Name = "Confirmer le nouveau mot de passe")]
+            [Display(Name = "Confirmation")]
             [Compare("NewPassword", ErrorMessage = "Le mot de passe et sa confirmation ne correspondent pas.")]
             public string ConfirmPassword { get; set; }
         }

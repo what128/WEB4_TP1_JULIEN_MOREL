@@ -116,16 +116,16 @@
 			{
                 @if (Model.Evenement.AuteurId == Model.Usr.Id)
                 {
-                     <a class="btn btn-primary" asp-page="/Evenements/Delete" asp-route-id="@Model.Evenement.Id" class="btn btn-info mt-2">Annuler mon évènement</a>
+                     <a class="btn btn-primary text-center w-50" asp-page="/Evenements/Delete" asp-route-id="@Model.Evenement.Id" class="btn btn-info mt-2">Annuler mon évènement</a>
                 }
                 else
                 {  
-                    <a class="btn btn-primary" asp-page="/Evenements/AnnulerParticipation" asp-route-id="@Model.Evenement.Id" class="btn btn-info mt-2">Annuler ma participation</a>
+                    <a class="btn btn-primary text-center w-50" asp-page="/Evenements/AnnulerParticipation" asp-route-id="@Model.Evenement.Id" class="btn btn-info mt-2">Annuler ma participation</a>
                 }
 			}
 			else if (Model.Evenement.Auteur.UserName != User.Identity.Name)
 			{
-				<a class="btn btn-primary" asp-page="/Evenements/Participer" asp-route-id="@Model.Evenement.Id" class="btn btn-info mt-2">Participer</a>	
+				<a class="btn btn-primary text-center w-50" asp-page="/Evenements/Participer" asp-route-id="@Model.Evenement.Id" class="btn btn-info mt-2">Participer</a>	
 			}	
         }
     </dl>

@@ -61,7 +61,7 @@ else
                     @Html.DisplayFor(modelItem => item.Description)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Image)
+                    <img src="@Model.ImageFolder@item.Image" alt="Image de - @item.Titre" class="event-img"/>
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Auteur.UserName)
@@ -97,8 +97,8 @@ else
                     @Html.DisplayFor(modelItem => item.CodePostal)
                 </td>  
                 <td>  
-                    <a class="btn btn-primary" asp-page="./AnnulerParticipation" asp-route-id="@item.Id">Annuler Ma Participation</a>             
-                    <a class="btn btn-primary" asp-page="./Details" asp-route-id="@item.Id">Détails de l'évènement</a>
+                    <a class="btn btn-primary mb-3" asp-page="./AnnulerParticipation" asp-route-id="@item.Id">Annuler Ma Participation</a>             
+                    <a class="btn btn-primary mb-3" asp-page="./Details" asp-route-id="@item.Id">Détails de l'évènement</a>
                 </td>
             </tr>
     }

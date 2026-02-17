@@ -21,11 +21,9 @@
    </div>
 }
 
-<h1>Mes Évènements</h1>
+<h1 class="text-center">Mes Évènements</h1>
 
-<p>
-    <a class="btn btn-primary" asp-page="Create">Créer un nouvel évènement</a>
-</p>
+<a class="btn btn-primary w-25 d-inherit m-auto mb-3" asp-page="Create">Créer un nouvel évènement</a>
 @if(Model.Evenement.Count == 0)
 {
     <p>Vous n'avez encore créé aucun évènement.</p>
@@ -75,7 +73,7 @@ else
                     @Html.DisplayFor(modelItem => item.Description)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Categorie.Id)
+                    @Html.DisplayFor(modelItem => item.Categorie.Nom)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.DateDebut)
@@ -109,11 +107,11 @@ else
                     {
                             if (item.Annule == false)
                             {   
-                                <a asp-page="./Edit" asp-route-id="@item.Id">Modifier |</a>
-                                <a asp-page="./Delete" asp-route-id="@item.Id">Annuler |</a>
+                                <a class="btn btn-primary mb-3 d-block" asp-page="./Edit" asp-route-id="@item.Id">Modifier</a>
+                                <a class="btn btn-primary mb-3 d-block" asp-page="./Delete" asp-route-id="@item.Id">Annuler</a>
                             }
                     }                
-                    <a asp-page="./Details" asp-route-id="@item.Id">Détails</a>
+                    <a class="btn btn-primary mb-3 d-block" asp-page="./Details" asp-route-id="@item.Id">Détails</a>
                 
                 </td>
             </tr>

@@ -30,7 +30,30 @@ body {
   text-align: start;
 }
 
+img{
+    max-width: 100%;
+}
+
+.d-inherit{
+    display: inherit !important;
+}
+
 .event-img {
-    width: 200px;
-    height: 200px;
+    max-width: 100%;
+}
+
+table{
+    overflow: hidden;
+    width: 100%;
+    border: 2px solid black;
+    border-collapse: collapse;
+    border-bottom: 2px solid black !important;
+}
+
+table th, table td{
+    border: 2px solid black;
+}
+
+table td{
+    border-bottom: 2px solid black;
 }

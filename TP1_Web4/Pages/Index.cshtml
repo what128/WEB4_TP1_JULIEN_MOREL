@@ -35,21 +35,44 @@
             <div class="col-md-4">
                 <label for="categorieId" class="form-label">Catégorie</label>
                 <select name="categorieId" id="categorieId" class="form-select" asp-for="CategorieId">
-                    <option value="-1">Tous</option>
+					@if (TempData["CategorieIdRecherche"] != null && (int)TempData["CategorieIdRecherche"] == -1)
+					{
+						<option value="-1" selected>Tous</option>
+					}
+					else
+					{
+						<option value="-1">Tous</option>
+					}
                     @if (Model.Categories != null)
                     {
                         foreach (Categorie categorie in Model.Categories)
                         {
-                            <option value="@categorie.Id">
-                                @categorie.Nom
-                            </option>
+							@if (TempData["CategorieIdRecherche"] != null && (int)TempData["CategorieIdRecherche"] == categorie.Id)
+							{
+								<option value="@categorie.Id" selected>
+									@categorie.Nom
+								</option>
+							}
+							else
+							{	
+								<option value="@categorie.Id">
+									@categorie.Nom
+								</option>
+							}
                         }
                     }
                 </select>
             </div>
             <div class="col-md-5">
                 <label for="searchString" class="form-label">Recherche</label>
-                <input type="text" class="form-control" asp-for="Contenu" placeholder="Rechercher un évènement..." />
+				@if (TempData["ContenuRecherche"] != null)
+				{
+					<input type="text" class="form-control" asp-for="Contenu" placeholder="Rechercher un évènement..." value="@TempData["ContenuRecherche"]"/>
+				}
+				else
+				{	
+					<input type="text" class="form-control" asp-for="Contenu" placeholder="Rechercher un évènement..." />
+				}
             </div>
             <div class="col-md-3 d-grid">
                 <button type="submit" class="btn btn-primary">

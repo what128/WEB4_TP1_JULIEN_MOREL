@@ -12,19 +12,24 @@ namespace TP1_Web4.Pages.Evenements
     {
         private readonly TP1_Web4.Data.ApplicationDbContext _context;
         private readonly UserManager<Utilisateur> _userManager;
+        private readonly IConfiguration _configuration;
 
         /// <summary>
         ///  Initialise la page web Participations avec les services nécessaires.
         /// </summary>
         /// <param name="context">Le contexte de la base de données</param>
         /// <param name="userManager">Le gestionnaire des utilisateurs.</param>
-        public ParticipationsModel(TP1_Web4.Data.ApplicationDbContext context, UserManager<Utilisateur> userManager)
+        /// /// <param name="configuration">La configuration de l'rodinateur hôte.</param>
+        public ParticipationsModel(TP1_Web4.Data.ApplicationDbContext context, UserManager<Utilisateur> userManager, IConfiguration configuration)
         {
             _context = context;
             _userManager = userManager;
+            _configuration = configuration;
         }
 
         public IList<Evenement> Evenement { get; set; } = default!;
+
+        public string ImageFolder { get; set; }
 
         public Utilisateur Utilisateur { get; set; }
 
@@ -34,6 +39,7 @@ namespace TP1_Web4.Pages.Evenements
         /// <returns>Cette fonction sert à charger la page web en asynchrone et retourne quand elle finit cette tâche.</returns>
         public async Task OnGetAsync()
         {
+            ImageFolder = _configuration["Images:PublicUrl"];
             Utilisateur usr = await _userManager.GetUserAsync(User);
             Evenement = await _context.Evenements
                .Include(e => e.Categorie).Include(e => e.Auteur).Where(e => e.Participants.Contains(usr.Id) == true
