@@ -7,12 +7,28 @@
       "RelativeMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|solutionrelative:tp1_web4\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|e:\\web4\\tp1_julien_morel\\web4_tp1_julien_morel\\tp1_web4\\pages\\evenements\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|solutionrelative:tp1_web4\\pages\\evenements\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|e:\\web4\\tp1_julien_morel\\web4_tp1_julien_morel\\tp1_web4\\pages\\evenements\\participations.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|solutionrelative:tp1_web4\\pages\\evenements\\participations.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|e:\\web4\\tp1_julien_morel\\web4_tp1_julien_morel\\tp1_web4\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|solutionrelative:tp1_web4\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|e:\\web4\\tp1_julien_morel\\web4_tp1_julien_morel\\tp1_web4\\pages\\evenements\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|solutionrelative:tp1_web4\\pages\\evenements\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|e:\\web4\\tp1_julien_morel\\web4_tp1_julien_morel\\tp1_web4\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|solutionrelative:tp1_web4\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|e:\\web4\\tp1_julien_morel\\web4_tp1_julien_morel\\tp1_web4\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|solutionrelative:tp1_web4\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|e:\\web4\\tp1_julien_morel\\web4_tp1_julien_morel\\tp1_web4\\pages\\evenements\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|solutionrelative:tp1_web4\\pages\\evenements\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|e:\\web4\\tp1_julien_morel\\web4_tp1_julien_morel\\tp1_web4\\pages\\evenements\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|e:\\web4\\tp1_julien_morel\\web4_tp1_julien_morel\\tp1_web4\\pages\\evenements\\participations.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|solutionrelative:tp1_web4\\pages\\evenements\\participations.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|e:\\web4\\tp1_julien_morel\\web4_tp1_julien_morel\\tp1_web4\\pages\\evenements\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|solutionrelative:tp1_web4\\pages\\evenements\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|e:\\web4\\tp1_julien_morel\\web4_tp1_julien_morel\\tp1_web4\\areas\\identity\\pages\\account\\manage\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -127,14 +139,6 @@
       "RelativeMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|solutionrelative:tp1_web4\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|e:\\web4\\tp1_julien_morel\\web4_tp1_julien_morel\\tp1_web4\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|solutionrelative:tp1_web4\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|e:\\web4\\tp1_julien_morel\\web4_tp1_julien_morel\\tp1_web4\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|solutionrelative:tp1_web4\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|e:\\web4\\tp1_julien_morel\\web4_tp1_julien_morel\\tp1_web4\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|solutionrelative:tp1_web4\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -177,10 +181,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|e:\\web4\\tp1_julien_morel\\web4_tp1_julien_morel\\tp1_web4\\pages\\shared\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|solutionrelative:tp1_web4\\pages\\shared\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|e:\\web4\\tp1_julien_morel\\web4_tp1_julien_morel\\tp1_web4\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|solutionrelative:tp1_web4\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6AD76BD-33D4-463D-B8F1-D8BAFA4B6482}|TP1_Web4\\TP1_Web4.csproj|e:\\web4\\tp1_julien_morel\\web4_tp1_julien_morel\\tp1_web4\\pages\\error.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -362,63 +362,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Evenements\\Details.cshtml",
-              "RelativeDocumentMoniker": "TP1_Web4\\Pages\\Evenements\\Details.cshtml",
-              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Evenements\\Details.cshtml",
-              "RelativeToolTip": "TP1_Web4\\Pages\\Evenements\\Details.cshtml",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwBkAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-31T20:37:44.909Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Details.cshtml.cs",
-              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Evenements\\Details.cshtml.cs",
-              "RelativeDocumentMoniker": "TP1_Web4\\Pages\\Evenements\\Details.cshtml.cs",
-              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Evenements\\Details.cshtml.cs",
-              "RelativeToolTip": "TP1_Web4\\Pages\\Evenements\\Details.cshtml.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAuwEIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-31T20:37:44.997Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Evenements\\Index.cshtml",
-              "RelativeDocumentMoniker": "TP1_Web4\\Pages\\Evenements\\Index.cshtml",
-              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Evenements\\Index.cshtml",
-              "RelativeToolTip": "TP1_Web4\\Pages\\Evenements\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-31T20:12:45.195Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Participations.cshtml",
-              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Evenements\\Participations.cshtml",
-              "RelativeDocumentMoniker": "TP1_Web4\\Pages\\Evenements\\Participations.cshtml",
-              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Evenements\\Participations.cshtml",
-              "RelativeToolTip": "TP1_Web4\\Pages\\Evenements\\Participations.cshtml",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAAGIAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-10T18:48:41.74Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "Participations.cshtml.cs",
               "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Evenements\\Participations.cshtml.cs",
               "RelativeDocumentMoniker": "TP1_Web4\\Pages\\Evenements\\Participations.cshtml.cs",
@@ -426,8 +374,7 @@
               "RelativeToolTip": "TP1_Web4\\Pages\\Evenements\\Participations.cshtml.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAgwDAAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T18:50:56.798Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-10T18:50:56.798Z"
             },
             {
               "$type": "Document",
@@ -437,14 +384,14 @@
               "RelativeDocumentMoniker": "TP1_Web4\\wwwroot\\css\\site.css",
               "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\wwwroot\\css\\site.css",
               "RelativeToolTip": "TP1_Web4\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAD8AAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADIAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-02-06T18:24:25.188Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
               "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
@@ -452,12 +399,11 @@
               "RelativeToolTip": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-07T21:34:18.193Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-07T21:34:18.193Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
@@ -465,12 +411,11 @@
               "RelativeToolTip": "TP1_Web4\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-06T14:04:32.955Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-06T14:04:32.955Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
@@ -478,12 +423,11 @@
               "RelativeToolTip": "TP1_Web4\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-16T21:04:25.366Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-16T21:04:25.366Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "Login.cshtml",
               "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
@@ -491,220 +435,11 @@
               "RelativeToolTip": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAACMAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-06T16:28:17.869Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-06T16:28:17.869Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "AccessDenied.cshtml.cs",
-              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml.cs",
-              "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml.cs",
-              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml.cs",
-              "RelativeToolTip": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-14T21:57:26.951Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
-              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
-              "RelativeToolTip": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-17T17:43:19.723Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AccessDenied.cshtml",
-              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
-              "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
-              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
-              "RelativeToolTip": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-17T16:47:03.242Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
-              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
-              "RelativeToolTip": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-17T17:33:23.886Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ChangePassword.cshtml",
-              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
-              "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
-              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
-              "RelativeToolTip": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-07T21:49:14.068Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TP1_Web4.csproj",
-              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\TP1_Web4.csproj",
-              "RelativeDocumentMoniker": "TP1_Web4\\TP1_Web4.csproj",
-              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\TP1_Web4.csproj",
-              "RelativeToolTip": "TP1_Web4\\TP1_Web4.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-02-06T13:55:30.968Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
-              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
-              "RelativeToolTip": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-16T21:04:44.552Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "_StatusMessage.cshtml",
-              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_StatusMessage.cshtml",
-              "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_StatusMessage.cshtml",
-              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_StatusMessage.cshtml",
-              "RelativeToolTip": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_StatusMessage.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-13T14:03:03.768Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "_ManageNav.cshtml",
-              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
-              "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
-              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
-              "RelativeToolTip": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAB7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-06T15:10:01.395Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Delete.cshtml.cs",
-              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Evenements\\Delete.cshtml.cs",
-              "RelativeDocumentMoniker": "TP1_Web4\\Pages\\Evenements\\Delete.cshtml.cs",
-              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Evenements\\Delete.cshtml.cs",
-              "RelativeToolTip": "TP1_Web4\\Pages\\Evenements\\Delete.cshtml.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAQwC4AAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-06T17:31:35.713Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Edit.cshtml.cs",
-              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Evenements\\Edit.cshtml.cs",
-              "RelativeDocumentMoniker": "TP1_Web4\\Pages\\Evenements\\Edit.cshtml.cs",
-              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Evenements\\Edit.cshtml.cs",
-              "RelativeToolTip": "TP1_Web4\\Pages\\Evenements\\Edit.cshtml.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAIwDsAAABnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-06T17:30:49.697Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Edit.cshtml.cs",
-              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Admin\\Pages\\Categories\\Edit.cshtml.cs",
-              "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Admin\\Pages\\Categories\\Edit.cshtml.cs",
-              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Admin\\Pages\\Categories\\Edit.cshtml.cs",
-              "RelativeToolTip": "TP1_Web4\\Areas\\Admin\\Pages\\Categories\\Edit.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFMAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-31T20:52:56.763Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Admin\\Pages\\Categories\\Edit.cshtml",
-              "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Admin\\Pages\\Categories\\Edit.cshtml",
-              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Admin\\Pages\\Categories\\Edit.cshtml",
-              "RelativeToolTip": "TP1_Web4\\Areas\\Admin\\Pages\\Categories\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-31T20:52:56.686Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Program.cs",
-              "RelativeDocumentMoniker": "TP1_Web4\\Program.cs",
-              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Program.cs",
-              "RelativeToolTip": "TP1_Web4\\Program.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAQwEsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-31T20:01:59.17Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "_ValidationScriptsPartial.cshtml",
-              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
-              "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
-              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
-              "RelativeToolTip": "TP1_Web4\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-06T14:04:45.762Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "ManageNavPages.cs",
-              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\ManageNavPages.cs",
-              "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\ManageNavPages.cs",
-              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\ManageNavPages.cs",
-              "RelativeToolTip": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\ManageNavPages.cs",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-07T21:34:25.191Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 5,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "TP1_Web4\\Pages\\Index.cshtml.cs",
@@ -712,11 +447,280 @@
               "RelativeToolTip": "TP1_Web4\\Pages\\Index.cshtml.cs",
               "ViewState": "AgIAAEMAAAAAAAAAAAAYwE0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-31T20:21:21.82Z"
+              "WhenOpened": "2026-01-31T20:21:21.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DbInitializer.cs",
+              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Data\\DbInitializer.cs",
+              "RelativeDocumentMoniker": "TP1_Web4\\Data\\DbInitializer.cs",
+              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Data\\DbInitializer.cs",
+              "RelativeToolTip": "TP1_Web4\\Data\\DbInitializer.cs",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAAwJAAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T23:32:03.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "TP1_Web4\\Pages\\Index.cshtml",
+              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Index.cshtml",
+              "RelativeToolTip": "TP1_Web4\\Pages\\Index.cshtml",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAGwAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-31T20:02:53.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Participations.cshtml",
+              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Evenements\\Participations.cshtml",
+              "RelativeDocumentMoniker": "TP1_Web4\\Pages\\Evenements\\Participations.cshtml",
+              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Evenements\\Participations.cshtml",
+              "RelativeToolTip": "TP1_Web4\\Pages\\Evenements\\Participations.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAD8AAABzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-10T18:48:41.74Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Evenements\\Index.cshtml",
+              "RelativeDocumentMoniker": "TP1_Web4\\Pages\\Evenements\\Index.cshtml",
+              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Evenements\\Index.cshtml",
+              "RelativeToolTip": "TP1_Web4\\Pages\\Evenements\\Index.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-31T20:12:45.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Details.cshtml.cs",
+              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Evenements\\Details.cshtml.cs",
+              "RelativeDocumentMoniker": "TP1_Web4\\Pages\\Evenements\\Details.cshtml.cs",
+              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Evenements\\Details.cshtml.cs",
+              "RelativeToolTip": "TP1_Web4\\Pages\\Evenements\\Details.cshtml.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAuwEIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T20:37:44.997Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Evenements\\Details.cshtml",
+              "RelativeDocumentMoniker": "TP1_Web4\\Pages\\Evenements\\Details.cshtml",
+              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Evenements\\Details.cshtml",
+              "RelativeToolTip": "TP1_Web4\\Pages\\Evenements\\Details.cshtml",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwBkAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-31T20:37:44.909Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AccessDenied.cshtml.cs",
+              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml.cs",
+              "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml.cs",
+              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml.cs",
+              "RelativeToolTip": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-14T21:57:26.951Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
+              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
+              "RelativeToolTip": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-17T17:43:19.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AccessDenied.cshtml",
+              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
+              "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
+              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
+              "RelativeToolTip": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-17T16:47:03.242Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+              "RelativeToolTip": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-17T17:33:23.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ChangePassword.cshtml",
+              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
+              "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
+              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
+              "RelativeToolTip": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-07T21:49:14.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TP1_Web4.csproj",
+              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\TP1_Web4.csproj",
+              "RelativeDocumentMoniker": "TP1_Web4\\TP1_Web4.csproj",
+              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\TP1_Web4.csproj",
+              "RelativeToolTip": "TP1_Web4\\TP1_Web4.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-06T13:55:30.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
+              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
+              "RelativeToolTip": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-16T21:04:44.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "_StatusMessage.cshtml",
+              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_StatusMessage.cshtml",
+              "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_StatusMessage.cshtml",
+              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_StatusMessage.cshtml",
+              "RelativeToolTip": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_StatusMessage.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-13T14:03:03.768Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "_ManageNav.cshtml",
+              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+              "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+              "RelativeToolTip": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAB7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-06T15:10:01.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Delete.cshtml.cs",
+              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Evenements\\Delete.cshtml.cs",
+              "RelativeDocumentMoniker": "TP1_Web4\\Pages\\Evenements\\Delete.cshtml.cs",
+              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Evenements\\Delete.cshtml.cs",
+              "RelativeToolTip": "TP1_Web4\\Pages\\Evenements\\Delete.cshtml.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAQwC4AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T17:31:35.713Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Edit.cshtml.cs",
+              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Evenements\\Edit.cshtml.cs",
+              "RelativeDocumentMoniker": "TP1_Web4\\Pages\\Evenements\\Edit.cshtml.cs",
+              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Evenements\\Edit.cshtml.cs",
+              "RelativeToolTip": "TP1_Web4\\Pages\\Evenements\\Edit.cshtml.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAIwDsAAABnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T17:30:49.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Edit.cshtml.cs",
+              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Admin\\Pages\\Categories\\Edit.cshtml.cs",
+              "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Admin\\Pages\\Categories\\Edit.cshtml.cs",
+              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Admin\\Pages\\Categories\\Edit.cshtml.cs",
+              "RelativeToolTip": "TP1_Web4\\Areas\\Admin\\Pages\\Categories\\Edit.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFMAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T20:52:56.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Admin\\Pages\\Categories\\Edit.cshtml",
+              "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Admin\\Pages\\Categories\\Edit.cshtml",
+              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Admin\\Pages\\Categories\\Edit.cshtml",
+              "RelativeToolTip": "TP1_Web4\\Areas\\Admin\\Pages\\Categories\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-31T20:52:56.686Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 28,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Program.cs",
+              "RelativeDocumentMoniker": "TP1_Web4\\Program.cs",
+              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Program.cs",
+              "RelativeToolTip": "TP1_Web4\\Program.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAQwEsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T20:01:59.17Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "TP1_Web4\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-06T14:04:45.762Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ManageNavPages.cs",
+              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\ManageNavPages.cs",
+              "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\ManageNavPages.cs",
+              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\ManageNavPages.cs",
+              "RelativeToolTip": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\ManageNavPages.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T21:34:25.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Evenements\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "TP1_Web4\\Pages\\Evenements\\Index.cshtml.cs",
@@ -728,7 +732,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Evenements\\Edit.cshtml",
               "RelativeDocumentMoniker": "TP1_Web4\\Pages\\Evenements\\Edit.cshtml",
@@ -740,7 +744,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "Login.cshtml.cs",
               "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
               "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
@@ -752,7 +756,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "TP1_Web4\\Pages\\_ViewImports.cshtml",
@@ -764,7 +768,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "Error.cshtml",
               "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Error.cshtml",
               "RelativeDocumentMoniker": "TP1_Web4\\Pages\\Error.cshtml",
@@ -776,19 +780,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Index.cshtml",
-              "RelativeDocumentMoniker": "TP1_Web4\\Pages\\Index.cshtml",
-              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Index.cshtml",
-              "RelativeToolTip": "TP1_Web4\\Pages\\Index.cshtml",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAC0AAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-31T20:02:53.135Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "appsettings.json",
               "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\appsettings.json",
               "RelativeDocumentMoniker": "TP1_Web4\\appsettings.json",
@@ -800,7 +792,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "_Footer.cshtml",
               "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Admin\\Pages\\Shared\\_Footer.cshtml",
               "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Admin\\Pages\\Shared\\_Footer.cshtml",
@@ -812,7 +804,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Admin\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Admin\\Pages\\Index.cshtml",
@@ -824,7 +816,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Admin\\Pages\\Categories\\Index.cshtml",
               "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Admin\\Pages\\Categories\\Index.cshtml",
@@ -836,7 +828,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "Details.cshtml",
               "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Admin\\Pages\\Categories\\Details.cshtml",
               "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Admin\\Pages\\Categories\\Details.cshtml",
@@ -848,7 +840,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Admin\\Pages\\Categories\\Delete.cshtml",
               "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Admin\\Pages\\Categories\\Delete.cshtml",
@@ -860,7 +852,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "Create.cshtml",
               "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Admin\\Pages\\Categories\\Create.cshtml",
               "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Admin\\Pages\\Categories\\Create.cshtml",
@@ -872,7 +864,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "ChangePassword.cshtml.cs",
               "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
               "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
@@ -884,7 +876,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
@@ -896,7 +888,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "Register.cshtml",
               "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "TP1_Web4\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
@@ -908,7 +900,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "_Footer.cshtml",
               "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Pages\\Shared\\_Footer.cshtml",
               "RelativeDocumentMoniker": "TP1_Web4\\Pages\\Shared\\_Footer.cshtml",
@@ -941,18 +933,6 @@
               "ViewState": "AgIAAIYAAAAAAAAAAAAAAHIAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-06T14:06:25.708Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "DbInitializer.cs",
-              "DocumentMoniker": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Data\\DbInitializer.cs",
-              "RelativeDocumentMoniker": "TP1_Web4\\Data\\DbInitializer.cs",
-              "ToolTip": "E:\\Web4\\TP1_JULIEN_MOREL\\WEB4_TP1_JULIEN_MOREL\\TP1_Web4\\Data\\DbInitializer.cs",
-              "RelativeToolTip": "TP1_Web4\\Data\\DbInitializer.cs",
-              "ViewState": "AgIAAIkAAAAAAAAAAAAAwI0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T23:32:03.402Z"
             },
             {
               "$type": "Document",

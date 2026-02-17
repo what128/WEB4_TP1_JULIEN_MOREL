@@ -125,7 +125,7 @@ namespace TP1_Web4.Data
                         evenements.Add(new Evenement
                         {
                             Titre = $"{cat.Nom} #{i}",
-                            Description = $"Description de {cat.Nom} #{i}",
+                            Description = $"Pallentesque sapien feugiat vitae #{i}",
                             Image = "default.jpg",
                             CategorieId = cat.Id,
                             AuteurId = auteur.Id,
@@ -136,6 +136,22 @@ namespace TP1_Web4.Data
                             Ville = "Québec",
                             CodePostal = "G1K3B8",
                             Participants = new List<string> {auteur.Id}
+                        });
+
+                        evenements.Add(new Evenement
+                        {
+                            Titre = $"{cat.Nom} #{i}",
+                            Description = $"ipsum ismet consectetur #{i}",
+                            Image = "rick.png",
+                            CategorieId = cat.Id,
+                            AuteurId = auteur.Id,
+                            Annule = false,
+                            DateDebut = DateTime.Now.AddDays(rnd.Next(1, 60)),
+                            DateFin = DateTime.Now.AddDays(rnd.Next(61, 120)),
+                            Addresse = $"{rnd.Next(100, 999)} rue Exemple",
+                            Ville = "Beauport",
+                            CodePostal = "G1E3G1",
+                            Participants = new List<string> { auteur.Id }
                         });
                     }
                 }
