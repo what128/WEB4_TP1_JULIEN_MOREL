@@ -110,11 +110,12 @@ namespace TP1_Web4.Pages.Evenements
                     string codePostalUtilisateur = Utilisateur.CodePostal;
                     string codePostalEvenement = Evenement.CodePostal;
                     string apiUrl = $"https://api.zip-codes.com/ZipCodesAPI.svc/1.0/CalculateDistance/ByZip?fromzipcode" +
-                        $"={codePostalUtilisateur}&tozipcode={codePostalEvenement}&key=UQWFBF1XPN4DGNP6P7G2";
+                        $"={codePostalUtilisateur}&tozipcode={codePostalEvenement}&key=7MQORTSRX4LNLDH42T0F";
 
                     try
                     {
                         Distance = await _httpClient.GetFromJsonAsync<ApiEvenement>(apiUrl);
+                        Distance.DistanceInKm = (float)Math.Round(Distance.DistanceInKm, 2);
                     }
                     catch (Exception)
                     {

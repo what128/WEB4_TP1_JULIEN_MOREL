@@ -110,7 +110,7 @@ namespace TP1_Web4.Pages
                     string codePostalUtilisateur = Utilisateur.CodePostal;
                     string codePostalEvenement = e.CodePostal;
                     string apiUrl = $"https://api.zip-codes.com/ZipCodesAPI.svc/1.0/CalculateDistance/ByZip?fromzipcode" +
-                        $"={codePostalUtilisateur}&tozipcode={codePostalEvenement}&key=UQWFBF1XPN4DGNP6P7G2";
+                        $"={codePostalUtilisateur}&tozipcode={codePostalEvenement}&key=7MQORTSRX4LNLDH42T0F";
 
                     try
                     {
@@ -121,7 +121,7 @@ namespace TP1_Web4.Pages
                         Distance = new ApiEvenement();
                         Distance.DistanceInKm = -1;
                     }
-                    Distances.Add(e.Id, Distance.DistanceInKm);
+                    Distances.Add(e.Id, Math.Round(Distance.DistanceInKm, 2));
                 }
             }
         }
