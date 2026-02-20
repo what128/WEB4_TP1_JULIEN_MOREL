@@ -2,7 +2,7 @@
 @model TP1_Web4.Pages.Evenements.DetailsModel
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Détails";
 }
 
 @if (TempData["Confirmation"] != null)
@@ -54,7 +54,7 @@
                 }
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Evenement.Categorie)
+            Catégorie
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Evenement.Categorie.Nom)
